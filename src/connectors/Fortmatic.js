@@ -6,7 +6,9 @@ const chainIdToNetwork = {
   1: 'mainnet',
   3: 'ropsten',
   4: 'rinkeby',
-  42: 'kovan'
+  42: 'kovan',
+  30: 'rskmainnet',
+  31: 'rsktestnet'
 }
 
 export class FortmaticConnector extends FortmaticConnectorCore {

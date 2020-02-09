@@ -19,8 +19,8 @@ const UPDATE = 'UPDATE'
 
 const ETH = {
   ETH: {
-    [NAME]: 'Ethereum',
-    [SYMBOL]: 'ETH',
+    [NAME]: 'RBTC',
+    [SYMBOL]: 'RBTC',
     [DECIMALS]: 18,
     [EXCHANGE_ADDRESS]: null
   }

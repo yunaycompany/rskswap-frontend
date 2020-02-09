@@ -31,7 +31,9 @@ const ETHERSCAN_PREFIXES = {
   3: 'ropsten.',
   4: 'rinkeby.',
   5: 'goerli.',
-  42: 'kovan.'
+  42: 'kovan.',
+  30: 'rskmainnet.',
+  31: 'rsktestnet.'
 }
 
 export function getEtherscanLink(networkId, data, type) {
@@ -127,6 +129,12 @@ export function getNetworkName(networkId) {
     }
     case 42: {
       return 'the Kovan Test Network'
+    }
+    case 30: {
+      return 'the RSK Mainnet Network'
+    }
+    case 31: {
+      return 'the RSK Test Network'
     }
     default: {
       return 'the correct network'
