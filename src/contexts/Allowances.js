@@ -79,7 +79,8 @@ export function useAddressAllowance(address, tokenAddress, spenderAddress) {
             update(chainId, address, tokenAddress, spenderAddress, value, globalBlockNumber)
           }
         })
-        .catch(() => {
+        .catch((err) => {
+          console.log(err)
           if (!stale) {
             update(chainId, address, tokenAddress, spenderAddress, null, globalBlockNumber)
           }

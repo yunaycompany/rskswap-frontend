@@ -290,7 +290,7 @@ export async function getTokenAllowance(address, tokenAddress, spenderAddress, l
     )
   }
 
-  return getContract(tokenAddress, ERC20_ABI, library).allowance(address, spenderAddress)
+  return getContract(tokenAddress.toLowerCase(), ERC20_ABI, library).allowance(address.toLowerCase(), spenderAddress.toLowerCase())
 }
 
 // amount must be a BigNumber, {base,display}Decimals must be Numbers
