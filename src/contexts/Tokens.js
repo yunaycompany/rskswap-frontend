@@ -17,7 +17,7 @@ const EXCHANGE_ADDRESS = 'exchangeAddress'
 
 const UPDATE = 'UPDATE'
 
-const ETH = {
+export const ETH = {
   ETH: {
     [NAME]: 'RBTC',
     [SYMBOL]: 'RBTC',
@@ -607,6 +607,12 @@ export const INITIAL_TOKENS_CONTEXT = {
       [SYMBOL]: 'RIF',
       [DECIMALS]: 18,
       [EXCHANGE_ADDRESS]: '0x98A134a853f8f4bD1c12510efd2921a7504719F7'
+    },
+    '0xCb46C0DdC60d18eFEB0e586c17AF6Ea36452DaE0': {
+      [NAME]: 'DoC',
+      [SYMBOL]: 'DOC',
+      [DECIMALS]: 18,
+      [EXCHANGE_ADDRESS]: '0xA951C44c77e1FE4672a370E04fF4C6019B77697d'
     }
   }
 }

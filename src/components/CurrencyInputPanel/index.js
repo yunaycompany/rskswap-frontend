@@ -18,7 +18,7 @@ import Modal from '../Modal'
 import TokenLogo from '../TokenLogo'
 import SearchIcon from '../../assets/images/magnifying-glass.svg'
 import { useTransactionAdder, usePendingApproval } from '../../contexts/Transactions'
-import { useTokenDetails, useAllTokenDetails, INITIAL_TOKENS_CONTEXT } from '../../contexts/Tokens'
+import { useTokenDetails, useAllTokenDetails, INITIAL_TOKENS_CONTEXT, ETH } from '../../contexts/Tokens'
 import { useAddressBalance } from '../../contexts/Balances'
 import { ReactComponent as Close } from '../../assets/images/x.svg'
 import { transparentize } from 'polished'
@@ -501,8 +501,8 @@ function CurrencySelectModal({ isOpen, onDismiss, onTokenSelect, urlAddedTokens 
           const bSymbol = allTokens[b].symbol.toLowerCase()
 
           // pin ETH to top
-          if (aSymbol === 'ETH'.toLowerCase() || bSymbol === 'ETH'.toLowerCase()) {
-            return aSymbol === bSymbol ? 0 : aSymbol === 'ETH'.toLowerCase() ? -1 : 1
+          if (aSymbol === ETH.ETH.symbol.toLowerCase() || bSymbol === ETH.ETH.symbol.toLowerCase()) {
+            return aSymbol === bSymbol ? 0 : aSymbol === ETH.ETH.symbol.toLowerCase() ? -1 : 1
           }
 
           // then tokens with balance

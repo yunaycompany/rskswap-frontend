@@ -26,18 +26,18 @@ export function safeAccess(object, path) {
     : null
 }
 
-const ETHERSCAN_PREFIXES = {
-  1: '',
-  3: 'ropsten.',
-  4: 'rinkeby.',
-  5: 'goerli.',
-  42: 'kovan.',
-  30: 'rskmainnet.',
-  31: 'rsktestnet.'
+const EXPLORER = {
+  1: 'https://etherscan.io',
+  3: 'https://ropsten.etherscan.io',
+  4: 'https://rinkeby.etherscan.io',
+  5: 'https://goerli.etherscan.io',
+  42: 'https://kovan.etherscan.io',
+  30: 'https://explorer.rsk.co',
+  31: 'https://explorer.testnet.rsk.co'
 }
 
 export function getEtherscanLink(networkId, data, type) {
-  const prefix = `https://${ETHERSCAN_PREFIXES[networkId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
+  const prefix = EXPLORER[networkId] || EXPLORER[1]
 
   switch (type) {
     case 'transaction': {
