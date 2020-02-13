@@ -603,16 +603,28 @@ export const INITIAL_TOKENS_CONTEXT = {
   },
   31: {
     '0x19F64674D8A5B4E652319F5e239eFd3bc969A1fE': {
-      [NAME]: 'Rif',
+      [NAME]: 'RIF',
       [SYMBOL]: 'RIF',
       [DECIMALS]: 18,
       [EXCHANGE_ADDRESS]: '0x98A134a853f8f4bD1c12510efd2921a7504719F7'
     },
     '0xCb46C0DdC60d18eFEB0e586c17AF6Ea36452DaE0': {
-      [NAME]: 'DoC',
+      [NAME]: 'Dollar on Chain',
       [SYMBOL]: 'DOC',
       [DECIMALS]: 18,
       [EXCHANGE_ADDRESS]: '0xA951C44c77e1FE4672a370E04fF4C6019B77697d'
+    },
+    '0x0a8d098e31A60DA2b9c874d97dE6e6B385C28E9D': {
+      [NAME]: 'True USD on RSK',
+      [SYMBOL]: 'rTUSD',
+      [DECIMALS]: 18,
+      [EXCHANGE_ADDRESS]: '0xc2Cf487cB2A18E866f13436AC137a671fF4b1A7e'
+    },
+    '0x0d86fca9be034a363cf12c9834af08d54a10451c': {
+      [NAME]: 'DAI on RSK',
+      [SYMBOL]: 'rDAI',
+      [DECIMALS]: 18,
+      [EXCHANGE_ADDRESS]: '0x9ec155Df512ab8496Ef05A2F2553d9F18C724B5d'
     }
   }
 }

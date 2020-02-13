@@ -255,12 +255,12 @@ const buildReserveObject = (chainId, tokenAddress, ethReserveAmount, tokenReserv
     amount: tokenReserveAmount
   }
 })
-const daiTokenAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F'
-const daiExchangeAddress = '0x2a1530C4C41db0B0b2bB646CB5Eb1A67b7158667'
-const usdcTokenAddress = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'
-const usdcExchangeAddress = '0x97deC872013f6B5fB443861090ad931542878126'
-const tusdTokenAddress = '0x0000000000085d4780B73119b644AE5ecd22b376'
-const tusdExchangeAddress = '0x5048b9d01097498Fd72F3F14bC9Bc74A5aAc8fA7'
+const daiTokenAddress = '0x0d86fca9be034a363cf12c9834af08d54a10451c'
+const daiExchangeAddress = '0x9ec155Df512ab8496Ef05A2F2553d9F18C724B5d'
+const usdcTokenAddress = '0xCb46C0DdC60d18eFEB0e586c17AF6Ea36452DaE0' //DOC
+const usdcExchangeAddress = '0xA951C44c77e1FE4672a370E04fF4C6019B77697d' //DOC
+const tusdTokenAddress = '0x0a8d098e31A60DA2b9c874d97dE6e6B385C28E9D'
+const tusdExchangeAddress = '0xc2Cf487cB2A18E866f13436AC137a671fF4b1A7e'
 export function useETHPriceInUSD() {
   const { chainId } = useWeb3React()
 
