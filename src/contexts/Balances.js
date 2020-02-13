@@ -127,7 +127,8 @@ export function Updater() {
               existingValue ||
               (await (tokenAddress === 'ETH'
                 ? getEtherBalance(account, library).catch(() => null)
-                : getTokenBalance(tokenAddress, account, library).catch(() => null)))
+                : getTokenBalance(tokenAddress, account, library).catch((err) => 
+                {console.log(err); return null})))
             )
           })
         ).then(balances => {
@@ -161,7 +162,8 @@ export function Updater() {
             const exchangeAddress = allTokens[tokenAddress].exchangeAddress
             const { value: existingValue } =
               safeAccess(stateRef.current, [chainId, exchangeAddress, tokenAddress]) || {}
-            return existingValue || (await getTokenBalance(tokenAddress, exchangeAddress, library).catch(() => null))
+            return existingValue || (await getTokenBalance(tokenAddress, exchangeAddress, library).catch((err) => 
+            {console.log(err); return null}))
           })
         ).then(tokenBalances => {
           updateAllForExchanges(
@@ -256,11 +258,11 @@ const buildReserveObject = (chainId, tokenAddress, ethReserveAmount, tokenReserv
   }
 })
 const daiTokenAddress = '0x0d86fca9be034a363cf12c9834af08d54a10451c'
-const daiExchangeAddress = '0x9ec155Df512ab8496Ef05A2F2553d9F18C724B5d'
-const usdcTokenAddress = '0xCb46C0DdC60d18eFEB0e586c17AF6Ea36452DaE0' //DOC
-const usdcExchangeAddress = '0xA951C44c77e1FE4672a370E04fF4C6019B77697d' //DOC
-const tusdTokenAddress = '0x0a8d098e31A60DA2b9c874d97dE6e6B385C28E9D'
-const tusdExchangeAddress = '0xc2Cf487cB2A18E866f13436AC137a671fF4b1A7e'
+const daiExchangeAddress = '0x9ec155df512ab8496ef05a2f2553d9f18c724b5d'
+const usdcTokenAddress = '0xcb46c0ddc60d18efeb0e586c17af6ea36452dae0' //DOC
+const usdcExchangeAddress = '0xa951c44c77e1fe4672a370e04ff4c6019b77697d' //DOC
+const tusdTokenAddress = '0x0a8d098e31a60da2b9c874d97de6e6b385c28e9d'
+const tusdExchangeAddress = '0xc2cf487cb2a18e866f13436ac137a671ff4b1a7e'
 export function useETHPriceInUSD() {
   const { chainId } = useWeb3React()
 
