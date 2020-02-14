@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { isAddress } from '../../utils'
 
-import { ReactComponent as EthereumLogo } from '../../assets/images/ethereum-logo.svg'
+import { ReactComponent as EthereumLogo } from '../../assets/images/RSK-logo.svg'
 
 const TOKEN_ICON_API = address =>
-  `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${isAddress(
+  //`https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${isAddress(
+    `https://raw.githubusercontent.com/Think-and-Dev/uniswap-frontend/rsk-uniswap/src/assets/tokens/31/${isAddress(
     address
   )}/logo.png`
 const BAD_IMAGES = {}

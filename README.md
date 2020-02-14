@@ -47,3 +47,9 @@ If deploying with Github Pages, be aware that there's some [tricky client-side r
 ## Contributions
 
 **Please open all pull requests against the `beta` branch.** CI checks will run against all PRs. To ensure that your changes will pass, run `yarn check:all` before pushing. If this command fails, you can try to automatically fix problems with `yarn fix:all`, or do it manually.
+
+## Contracts
+
+### RSK Testnet
+[Factory Contract](https://explorer.testnet.rsk.co/address/0x5480c8b016d95a51c07a10bd640a0a7a439bd782)
+[Exchange Template Contract](https://explorer.testnet.rsk.co/address/0x2160515fe0dcce34581c15e031359f9c1d0e9efa)
