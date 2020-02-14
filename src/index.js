@@ -25,7 +25,9 @@ function getLibrary(provider) {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  ReactGA.initialize('UA-128182339-1')
+  // TODO: configure GA tracking ID.
+  //ReactGA.initialize('UA-128182339-1')
+  ReactGA.initialize('test', { testMode: true })
   ReactGA.set({
     customBrowserType: !isMobile ? 'desktop' : window.web3 || window.ethereum ? 'mobileWeb3' : 'mobileRegular'
   })

@@ -1,8 +1,8 @@
 {
   "name": "uniswap",
-  "description": "Uniswap Exchange Protocol",
+  "description": "Uniswap Exchange Protocol on RSK (Testnet)",
   "version": "0.1.0",
-  "homepage": "https://uniswap.exchange",
+  "homepage": "https://think-and-dev.github.io/uniswap-frontend",
   "private": true,
   "dependencies": {
     "@reach/dialog": "^0.2.8",
@@ -50,7 +50,8 @@
     "fix:all": "yarn fix:lint && yarn fix:format",
     "check:lint": "yarn lint:base",
     "check:format": "yarn format:base --check",
-    "check:all": "yarn check:lint && yarn check:format"
+    "check:all": "yarn check:lint && yarn check:format",
+    "deploy": "yarn build && git subtree push --prefix build origin gh-pages"
   },
   "eslintConfig": {
     "extends": "react-app"
