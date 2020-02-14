@@ -9,7 +9,10 @@ i18next
   .use(initReactI18next)
   .init({
     backend: {
-      loadPath: '/locales/{{lng}}.json'
+      loadPath: () => {
+        // check the domain
+        return (window.location.host === 'think-and-dev.github.io' ? '/uniswap-frontend':'') + '/locales/{{lng}}.json';
+      },
     },
     react: {
       useSuspense: true
