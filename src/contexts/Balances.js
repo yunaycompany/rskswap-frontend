@@ -295,7 +295,7 @@ export function useETHPriceInUSD() {
         usdcTokenAddress,
         new BigNumber(usdcReserveETH.toString()),
         new BigNumber(usdcReserveToken.toString()),
-        6
+        18
       )
 
       const stablecoinReserves = [daiReservesObject, usdcReservesObject, tusdReservesObject]

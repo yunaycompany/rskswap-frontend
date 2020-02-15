@@ -335,8 +335,8 @@ export default function WalletModal({ pendingTransactions, confirmedTransactions
           )}
           {walletView !== WALLET_VIEWS.PENDING && (
             <Blurb>
-              <span>New to Ethereum? &nbsp;</span>{' '}
-              <Link href="https://ethereum.org/use/#3-what-is-a-wallet-and-which-one-should-i-use">
+              <span>New to RSK? &nbsp;</span>{' '}
+              <Link href="https://developers.rsk.co/develop/apps/wallets/">
                 Learn more about wallets
               </Link>
             </Blurb>
