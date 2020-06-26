@@ -6,9 +6,10 @@ import { WETH, ChainId } from 'uniswap-sdk-rsk'
 import EthereumLogo from '../../assets/images/rbtc-logo.png' //import EthereumLogo from '../../assets/images/ethereum-logo.png'
 import contractMap from '../../constants/tokens/contract-map.json'
 import contractTestnetMap from '../../constants/tokens/contract-testnet-map.json'
+
 const toChecksumAddress = require('rskjs-util').toChecksumAddress
 
-const TOKEN_ICON_API = (address, chainId) => {
+const getTokenLogoURL = (address, chainId) => {
   let logo = `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`
   if (chainId === ChainId.RSK_MAINNET) {
     const metadata = contractMap[toChecksumAddress(address, chainId)]
@@ -20,7 +21,7 @@ const TOKEN_ICON_API = (address, chainId) => {
   }
   return logo
 }
-const BAD_IMAGES = {}
+const NO_LOGO_ADDRESSES: { [tokenAddress: string]: true } = {}
 
 const Image = styled.img<{ size: string }>`
   width: ${({ size }) => size};
@@ -56,20 +57,16 @@ export default function TokenLogo({
   size?: string
   style?: React.CSSProperties
 }) {
-  const [error, setError] = useState(false)
+  const [, refresh] = useState<number>(0)
   const { chainId } = useActiveWeb3React()
 
-  // mock rinkeby DAI
-  if (chainId === 4 && address === '0xc7AD46e0b8a400Bb3C915120d284AafbA8fc4735') {
-    address = '0x6B175474E89094C44Da98b954EedeAC495271d0F'
-  }
-
   let path = ''
+  const validated = isAddress(address)
   // hard code to show ETH instead of WETH in UI
-  if (address === WETH[chainId].address) {
+  if (validated === WETH[chainId].address) {
     return <StyledEthereumLogo src={EthereumLogo} size={size} {...rest} />
-  } else if (!error && !BAD_IMAGES[address] && isAddress(address)) {
-    path = TOKEN_ICON_API(address, chainId)
+  } else if (!NO_LOGO_ADDRESSES[address] && validated) {
+    path = getTokenLogoURL(validated, chainId)
   } else {
     return (
       <Emoji {...rest} size={size}>
@@ -87,8 +84,8 @@ export default function TokenLogo({
       src={path}
       size={size}
       onError={() => {
-        BAD_IMAGES[address] = true
-        setError(true)
+        NO_LOGO_ADDRESSES[address] = true
+        refresh(i => i + 1)
       }}
     />
   )
