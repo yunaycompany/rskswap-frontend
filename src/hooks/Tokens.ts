@@ -1,5 +1,5 @@
 import { parseBytes32String } from '@ethersproject/strings'
-import { ChainId, Token, WETH } from '@uniswap/sdk'
+import { Token, WETH } from 'uniswap-sdk-rsk'
 import { useMemo } from 'react'
 import { ALL_TOKENS } from '../constants/tokens'
 import { NEVER_RELOAD, useSingleCallResult } from '../state/multicall/hooks'
@@ -24,10 +24,10 @@ export function useAllTokens(): { [address: string]: Token } {
         },
         // must make a copy because reduce modifies the map, and we do not
         // want to make a copy in every iteration
-        { ...ALL_TOKENS[chainId as ChainId] }
+        { ...ALL_TOKENS[chainId as number] }
       )
 
-    const weth = WETH[chainId as ChainId]
+    const weth = WETH[chainId]
     if (weth) {
       // we have to replace it as a workaround because if it is automatically
       // fetched by address it will cause an invariant when used in constructing

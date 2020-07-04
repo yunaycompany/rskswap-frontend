@@ -1,6 +1,6 @@
 import React, { useState, useContext, useCallback } from 'react'
 import styled, { ThemeContext } from 'styled-components'
-import { JSBI } from '@uniswap/sdk'
+import { JSBI } from 'uniswap-sdk-rsk'
 import { RouteComponentProps } from 'react-router-dom'
 
 import Question from '../../components/QuestionHelper'

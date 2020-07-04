@@ -1,5 +1,5 @@
 import React from 'react'
-import { Price, Token } from '@uniswap/sdk'
+import { Price, Token } from 'uniswap-sdk-rsk'
 import { useContext } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'

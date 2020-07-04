@@ -1,0 +1,44 @@
+{
+  "0x2aCc95758f8b5F583470bA265Eb685a8f45fC9D5": {
+    "name": "RIF",
+    "logo": "rif.png",
+    "erc20": true,
+    "symbol": "RIF",
+    "decimals": 18
+  },
+  "0xE700691Da7B9851F2F35f8b8182C69C53ccad9DB": {
+    "name": "Dollar on Chain",
+    "logo": "doc.png",
+    "erc20": true,
+    "symbol": "DOC",
+    "decimals": 18
+  },
+  "0x440cd83C160de5C96DDb20246815EA44C7Abbca8": {
+    "name": "BitPRO",
+    "logo": "bpro.png",
+    "erc20": true,
+    "symbol": "BITP",
+    "decimals": 18
+  },
+  "0x45d3E4fB311982a06ba52359d44cB4f5980e0ef1": {
+    "name": "RIF Name Service",
+    "logo": "rif.png",
+    "erc20": false,
+    "symbol": "RNS",
+    "decimals": 0
+  },
+  "0xe0CFF8a40f540657c62EB4CAC34b915e5ed8d8FF": {
+    "name": "Invecoin",
+    "logo": "inv.png",
+    "erc20": true,
+    "symbol": "INV",
+    "decimals": 18
+  },
+  "0x6B1a73d547F4009A26B8485b63D7015D248AD406": {
+    "name": "Dai Stablecoin",
+    "logo": "dai.png",
+    "erc20": true,
+    "symbol": "rDAI",
+    "decimals": 18
+  }
+}

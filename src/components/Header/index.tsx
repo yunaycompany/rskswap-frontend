@@ -1,4 +1,4 @@
-import { ChainId, WETH } from '@uniswap/sdk'
+import { ChainId, WETH } from 'uniswap-sdk-rsk'
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 import { Link as HistoryLink } from 'react-router-dom'
@@ -14,15 +14,15 @@ import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
 import { useTokenBalanceTreatingWETHasETH } from '../../state/wallet/hooks'
 
-import { ExternalLink, StyledInternalLink } from '../../theme'
+//import { ExternalLink, StyledInternalLink } from '../../theme'
 import { YellowCard } from '../Card'
-import { AutoColumn } from '../Column'
+//import { AutoColumn } from '../Column'
 import Settings from '../Settings'
 import Menu from '../Menu'
 
 import Row, { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
-import { VersionSwitch } from './VersionSwitch'
+//import { VersionSwitch } from './VersionSwitch'
 
 const HeaderFrame = styled.div`
   display: flex;
@@ -100,32 +100,34 @@ const UniIcon = styled(HistoryLink)<{ to: string }>`
   }
 `
 
-const MigrateBanner = styled(AutoColumn)`
-  width: 100%;
-  padding: 12px 0;
-  display: flex;
-  justify-content: center;
-  background-color: ${({ theme }) => theme.primary5};
-  color: ${({ theme }) => theme.primaryText1};
-  font-weight: 400;
-  text-align: center;
-  pointer-events: auto;
-  a {
-    color: ${({ theme }) => theme.primaryText1};
-  }
+// const MigrateBanner = styled(AutoColumn)`
+//   width: 100%;
+//   padding: 12px 0;
+//   display: flex;
+//   justify-content: center;
+//   background-color: ${({ theme }) => theme.primary5};
+//   color: ${({ theme }) => theme.primaryText1};
+//   font-weight: 400;
+//   text-align: center;
+//   pointer-events: auto;
+//   a {
+//     color: ${({ theme }) => theme.primaryText1};
+//   }
 
-  ${({ theme }) => theme.mediaWidth.upToSmall`
-    padding: 0;
-    display: none;
-  `};
-`
+//   ${({ theme }) => theme.mediaWidth.upToSmall`
+//     padding: 0;
+//     display: none;
+//   `};
+// `
 
 const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.MAINNET]: null,
   [ChainId.RINKEBY]: 'Rinkeby',
   [ChainId.ROPSTEN]: 'Ropsten',
   [ChainId.GÖRLI]: 'Görli',
-  [ChainId.KOVAN]: 'Kovan'
+  [ChainId.KOVAN]: 'Kovan',
+  [ChainId.RSK_MAINNET]: 'RSK',
+  [ChainId.RSK_TESTNET]: 'RSK Testnet'
 }
 
 const BalanceWrapper = styled.div`
@@ -142,7 +144,7 @@ export default function Header() {
 
   return (
     <HeaderFrame>
-      <MigrateBanner>
+      {/* <MigrateBanner>
         Uniswap V2 is live! Read the&nbsp;
         <ExternalLink href="https://uniswap.org/blog/launch-uniswap-v2/">
           <b>blog post ↗</b>
@@ -152,7 +154,7 @@ export default function Header() {
           <b>migrate your liquidity ↗</b>
         </StyledInternalLink>
         .
-      </MigrateBanner>
+      </MigrateBanner> */}
       <RowBetween padding="1rem">
         <HeaderElement>
           <Title>
@@ -171,7 +173,7 @@ export default function Header() {
               </TitleText>
             )}
           </Title>
-          <TestnetWrapper style={{ pointerEvents: 'auto' }}>{!isMobile && <VersionSwitch />}</TestnetWrapper>
+          {/* <TestnetWrapper style={{ pointerEvents: 'auto' }}>{!isMobile && <VersionSwitch />}</TestnetWrapper> */}
         </HeaderElement>
         <HeaderElement>
           <TestnetWrapper>
@@ -181,7 +183,7 @@ export default function Header() {
             <BalanceWrapper>
               {account && userEthBalance ? (
                 <Text style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
-                  {userEthBalance?.toSignificant(4)} ETH
+                  {userEthBalance?.toSignificant(4)} RBTC
                 </Text>
               ) : null}
             </BalanceWrapper>

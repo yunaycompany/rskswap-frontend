@@ -302,7 +302,7 @@ export default function WalletModal({
           <HeaderRow>{error instanceof UnsupportedChainIdError ? 'Wrong Network' : 'Error connecting'}</HeaderRow>
           <ContentWrapper>
             {error instanceof UnsupportedChainIdError ? (
-              <h5>Please connect to the appropriate Ethereum network.</h5>
+              <h5>Please connect to the appropriate RSK network.</h5>
             ) : (
               'Error connecting. Try refreshing the page.'
             )}
@@ -357,8 +357,8 @@ export default function WalletModal({
           )}
           {walletView !== WALLET_VIEWS.PENDING && (
             <Blurb>
-              <span>New to Ethereum? &nbsp;</span>{' '}
-              <ExternalLink href="https://ethereum.org/use/#3-what-is-a-wallet-and-which-one-should-i-use">
+              <span>New to RSK? &nbsp;</span>{' '}
+              <ExternalLink href="https://developers.rsk.co/rif/rns/guide/setup/">
                 Learn more about wallets
               </ExternalLink>
             </Blurb>

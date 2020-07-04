@@ -2,12 +2,24 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { isAddress } from '../../utils'
 import { useActiveWeb3React } from '../../hooks'
-import { WETH } from '@uniswap/sdk'
+import { WETH, ChainId } from 'uniswap-sdk-rsk'
+import EthereumLogo from '../../assets/images/rbtc-logo.png' //import EthereumLogo from '../../assets/images/ethereum-logo.png'
+import contractMap from '../../constants/tokens/contract-map.json'
+import contractTestnetMap from '../../constants/tokens/contract-testnet-map.json'
+const toChecksumAddress = require('rskjs-util').toChecksumAddress
 
-import EthereumLogo from '../../assets/images/ethereum-logo.png'
-
-const TOKEN_ICON_API = address =>
-  `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`
+const TOKEN_ICON_API = (address, chainId) => {
+  let logo = `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`
+  if (chainId === ChainId.RSK_MAINNET) {
+    const metadata = contractMap[toChecksumAddress(address, chainId)]
+    logo = `https://raw.githubusercontent.com/rsksmart/rsk-contract-metadata/master/images/${metadata.logo}`
+  }
+  if (chainId === ChainId.RSK_TESTNET) {
+    const metadata = contractTestnetMap[toChecksumAddress(address, chainId)]
+    logo = `https://raw.githubusercontent.com/rsksmart/rsk-testnet-contract-metadata/master/images/${metadata.logo}`
+  }
+  return logo
+}
 const BAD_IMAGES = {}
 
 const Image = styled.img<{ size: string }>`
@@ -57,7 +69,7 @@ export default function TokenLogo({
   if (address === WETH[chainId].address) {
     return <StyledEthereumLogo src={EthereumLogo} size={size} {...rest} />
   } else if (!error && !BAD_IMAGES[address] && isAddress(address)) {
-    path = TOKEN_ICON_API(address)
+    path = TOKEN_ICON_API(address, chainId)
   } else {
     return (
       <Emoji {...rest} size={size}>

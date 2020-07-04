@@ -1,32 +1,60 @@
 import { Contract } from '@ethersproject/contracts'
-import { getAddress } from '@ethersproject/address'
+//import { getAddress } from '@ethersproject/address'
 import { AddressZero } from '@ethersproject/constants'
 import { JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
 import { BigNumber } from '@ethersproject/bignumber'
 import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUniswapV2Router02.json'
 import { ROUTER_ADDRESS } from '../constants'
 import { ALL_TOKENS } from '../constants/tokens'
-import { ChainId, JSBI, Percent, TokenAmount, Token } from '@uniswap/sdk'
+import { ChainId, JSBI, Percent, TokenAmount, Token } from 'uniswap-sdk-rsk'
+import { arrayify, isHexString } from '@ethersproject/bytes'
+import { keccak256 } from '@ethersproject/keccak256'
+
+function getChecksumAddress(address: string): string {
+  if (!isHexString(address, 20)) {
+    throw Error('invalid address ' + address)
+  }
+  address = address.toLowerCase()
+  const chars = address.substring(2).split('')
+
+  const expanded = new Uint8Array(40)
+  for (let i = 0; i < 40; i++) {
+    expanded[i] = chars[i].charCodeAt(0)
+  }
+
+  const hashed = arrayify(keccak256(expanded))
+  for (let i = 0; i < 40; i += 2) {
+    if (hashed[i >> 1] >> 4 >= 8) {
+      chars[i] = chars[i].toUpperCase()
+    }
+    if ((hashed[i >> 1] & 0x0f) >= 8) {
+      chars[i + 1] = chars[i + 1].toUpperCase()
+    }
+  }
+  return '0x' + chars.join('')
+}
 
 // returns the checksummed address if the address is valid, otherwise returns false
 export function isAddress(value: any): string | false {
   try {
-    return getAddress(value)
+    return getChecksumAddress(value) //return getAddress(value)
   } catch {
     return false
   }
 }
 
-const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
-  1: '',
-  3: 'ropsten.',
-  4: 'rinkeby.',
-  5: 'goerli.',
-  42: 'kovan.'
+const EXPLORER = {
+  1: 'https://etherscan.io',
+  3: 'https://ropsten.etherscan.io',
+  4: 'https://rinkeby.etherscan.io',
+  5: 'https://goerli.etherscan.io',
+  42: 'https://kovan.etherscan.io',
+  30: 'https://explorer.rsk.co',
+  31: 'https://explorer.testnet.rsk.co'
 }
 
 export function getEtherscanLink(chainId: ChainId, data: string, type: 'transaction' | 'address'): string {
-  const prefix = `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
+  const prefix = EXPLORER[chainId] || EXPLORER[1]
 
   switch (type) {
     case 'transaction': {

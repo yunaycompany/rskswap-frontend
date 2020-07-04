@@ -1,0 +1,108 @@
+{
+  "0x19f64674D8a5b4e652319F5e239EFd3bc969a1FE": {
+    "name": "tRIF Token",
+    "logo": "rif.png",
+    "erc20": true,
+    "symbol": "tRIF",
+    "decimals": 18
+  },
+  "0xC3De9f38581F83e281F260D0ddBAac0E102Ff9F8": {
+    "name": "Rif Dollar on Chain",
+    "logo": "rdoc.png",
+    "erc20": true,
+    "symbol": "RDOC",
+    "decimals": 18
+  },
+  "0x23A1Aa7B11E68beBE560a36bEC04D1F79357f28d": {
+    "name": "RIF Pro",
+    "logo": "rifpro.png",
+    "erc20": true,
+    "symbol": "RIFP",
+    "decimals": 18
+  },
+  "0xCb46C0DdC60d18eFEB0e586c17AF6Ea36452DaE0": {
+    "name": "Dollar on Chain",
+    "logo": "doc.png",
+    "erc20": true,
+    "symbol": "DOC",
+    "decimals": 18
+  },
+  "0x4dA7997A819bb46B6758b9102234c289Dd2ad3bf": {
+    "name": "BitPRO",
+    "logo": "bpro.png",
+    "erc20": true,
+    "symbol": "BITP",
+    "decimals": 18
+  },
+  "0xCa0a477e19BaC7E0E172CCFd2e3c28a7200BDB71": {
+    "name": "RIF Name Service testnet",
+    "logo": "rif.png",
+    "erc20": false,
+    "symbol": "tRNS",
+    "decimals": 0
+  },
+  "0xc16625A9Cd128e79bF53774448Ccb36e940B639C": {
+    "name": "Invecoin",
+    "logo": "inv.png",
+    "erc20": true,
+    "symbol": "INV",
+    "decimals": 18
+  },
+  "0x8BBbd80981FE76D44854d8dF305e8985c19F0E78": {
+    "name": "ChainLink Token",
+    "logo": "link.png",
+    "erc20": true,
+    "symbol": "rKovLINK",
+    "decimals": 18
+  },
+  "0x0d86fcA9be034A363cf12c9834Af08d54A10451c": {
+    "name": "Dai Stablecoin",
+    "logo": "dai.png",
+    "erc20": true,
+    "symbol": "rKovDAI",
+    "decimals": 18
+  },
+  "0x6117c9529f15C52e2d3188D5285c745B757b5825": {
+    "name": "USD Coin",
+    "logo": "usdc.png",
+    "erc20": true,
+    "symbol": "rKovUSDC",
+    "decimals": 18
+  },
+  "0xcdC8CCBbFB6407c53118fe47259E8D00C81f42CD": {
+    "name": "Tether USD",
+    "logo": "usdt.png",
+    "erc20": true,
+    "symbol": "rKovUSDT",
+    "decimals": 18
+  },
+  "0x0a8d098e31A60da2b9c874D97de6E6b385c28e9d": {
+    "name": "True USD",
+    "logo": "tusd.png",
+    "erc20": true,
+    "symbol": "rKovTUSD",
+    "decimals": 18
+  },
+  "0x79055c1e06FBc5893D664D6e7521Aa0bd9a514e9": {
+    "name": "Wrapped Ether",
+    "logo": "weth.png",
+    "erc20": true,
+    "symbol": "rKovWETH",
+    "decimals": 18
+  },
+  "0x09b6ca5E4496238A1F176aEa6Bb607DB96c2286E": {
+    "name": "Wrapped RBTC",
+    "logo": "wrbtc.png",
+    "erc20": true,
+    "symbol": "WRBTC",
+    "decimals": 18
+  },
+  "0x823b3d62Cb5A4Ed97F26eD9888eA721b569aFE27": {
+    "name": "0x Protocol",
+    "logo": "zrx.png",
+    "erc20": true,
+    "symbol": "rKovZRX",
+    "decimals": 18
+  }
+  
+}
