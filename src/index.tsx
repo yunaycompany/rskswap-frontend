@@ -20,6 +20,12 @@ const Web3ProviderNetwork = createWeb3ReactRoot(NetworkContextName)
 function getLibrary(provider: any): Web3Provider {
   const library = new Web3Provider(provider)
   library.pollingInterval = 15000
+  // Fix transaction format  error from etherjs getTransactionReceipt as transactionReceipt format
+  // checks root to be a 32 bytes hash when on RSK its 0x01
+  const format = library?.formatter.formats
+  if (format) format.receipt['root'] = format.receipt['logsBloom']
+  Object.assign(library?.formatter, { format: format })
+
   return library
 }
 

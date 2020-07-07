@@ -1,6 +1,6 @@
 {
   "name": "@uniswap/interface",
-  "description": "Uniswap Interface",
+  "description": "RSK Uniswap Interface",
   "homepage": "https://uniswap.exchange",
   "private": true,
   "devDependencies": {
@@ -75,7 +75,7 @@
     "start-server-and-test": "^1.11.0",
     "styled-components": "^4.2.0",
     "typescript": "^3.8.3",
-    "uniswap-sdk-rsk": "../uniswap-sdk",
+    "uniswap-sdk-rsk": "../uniswap-sdk-rsk",
     "use-media": "^1.4.0"
   },
   "scripts": {

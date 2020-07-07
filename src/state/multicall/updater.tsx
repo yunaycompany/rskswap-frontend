@@ -119,8 +119,7 @@ export default function Updater() {
         fetchingBlockNumber: latestBlockNumber
       })
     )
-
-    chunkedCalls.forEach((chunk, index) =>
+    chunkedCalls.forEach((chunk, index) => {
       multicallContract
         .aggregate(chunk.map(obj => [obj.address, obj.callData]))
         .then(([resultsBlockNumber, returnData]: [BigNumber, string[]]) => {
@@ -151,7 +150,7 @@ export default function Updater() {
             })
           )
         })
-    )
+    })
   }, [chainId, multicallContract, dispatch, serializedOutdatedCallKeys, latestBlockNumber])
 
   return null

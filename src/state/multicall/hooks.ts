@@ -217,7 +217,6 @@ export function useMultipleContractSingleData(
         : [],
     [addresses, callData, fragment]
   )
-
   const results = useCallsData(calls, options)
 
   const latestBlockNumber = useBlockNumber()

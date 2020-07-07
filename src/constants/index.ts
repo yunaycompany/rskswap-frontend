@@ -2,7 +2,7 @@ import { ChainId, JSBI, Percent, Token, WETH, Pair, TokenAmount } from 'uniswap-
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x8c4a84c0359535e54abb210414460eb55c84b567' //'0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'
+export const ROUTER_ADDRESS = '0x8C4a84c0359535e54aBB210414460eB55C84b567' //'0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: { readonly [chainId in ChainId]: Token[] } = {
@@ -15,8 +15,14 @@ export const BASES_TO_CHECK_TRADES_AGAINST: { readonly [chainId in ChainId]: Tok
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
-  [ChainId.RSK_MAINNET]: [WETH[ChainId.RSK_MAINNET]],
-  [ChainId.RSK_TESTNET]: [WETH[ChainId.RSK_TESTNET]]
+  [ChainId.RSK_MAINNET]: [
+    WETH[ChainId.RSK_MAINNET],
+    new Token(ChainId.RSK_MAINNET, '0xe700691dA7b9851F2F35f8b8182c69c53CcaD9Db', 18, 'DOC', 'Dollar on Chain')
+  ],
+  [ChainId.RSK_TESTNET]: [
+    WETH[ChainId.RSK_TESTNET],
+    new Token(ChainId.RSK_TESTNET, '0xCB46c0ddc60D18eFEB0E586C17Af6ea36452Dae0', 18, 'DOC', 'Dollar on Chain')
+  ]
 }
 
 // used for display in the default list when adding liquidity

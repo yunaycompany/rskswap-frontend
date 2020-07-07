@@ -20,7 +20,6 @@ export default function Updater() {
 
   useEffect(() => {
     if (!chainId || !library || !lastBlockNumber) return
-
     Object.keys(allTransactions)
       .filter(hash => !allTransactions[hash].receipt)
       .forEach(hash => {
