@@ -1,6 +1,6 @@
 {
-  "name": "@uniswap/interface",
-  "description": "RSK Uniswap Interface",
+  "name": "uniswap-frontend-rsk",
+  "description": "Uniswap RSK Interface",
   "homepage": "https://uniswap.exchange",
   "private": true,
   "devDependencies": {

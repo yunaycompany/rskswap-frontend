@@ -6,8 +6,8 @@ import { Text } from 'rebass'
 
 import styled from 'styled-components'
 
-import Logo from '../../assets/svg/logo.svg'
-import LogoDark from '../../assets/svg/logo_white.svg'
+import Logo from '../../assets/svg/logox128.png'
+import LogoDark from '../../assets/svg/logox128.png'
 import Wordmark from '../../assets/svg/wordmark.svg'
 import WordmarkDark from '../../assets/svg/wordmark_white.svg'
 import { useActiveWeb3React } from '../../hooks'
@@ -159,7 +159,7 @@ export default function Header() {
         <HeaderElement>
           <Title>
             <UniIcon id="link" to="/">
-              <img src={isDark ? LogoDark : Logo} alt="logo" />
+              <img style={{ height: '64px' }} src={isDark ? LogoDark : Logo} alt="logo" />
             </UniIcon>
             {!isMobile && (
               <TitleText>
