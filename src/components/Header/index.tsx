@@ -121,13 +121,13 @@ const UniIcon = styled(HistoryLink)<{ to: string }>`
 // `
 
 const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
-  [ChainId.MAINNET]: null,
+  [ChainId.MAINNET]: 'Ethereum',
   [ChainId.RINKEBY]: 'Rinkeby',
   [ChainId.ROPSTEN]: 'Ropsten',
   [ChainId.GÖRLI]: 'Görli',
   [ChainId.KOVAN]: 'Kovan',
-  [ChainId.RSK_MAINNET]: 'RSK',
-  [ChainId.RSK_TESTNET]: 'RSK Testnet'
+  [ChainId.RSK_MAINNET]: null,
+  [ChainId.RSK_TESTNET]: 'Testnet'
 }
 
 const BalanceWrapper = styled.div`

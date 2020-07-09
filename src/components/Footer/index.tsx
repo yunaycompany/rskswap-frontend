@@ -22,7 +22,7 @@ export default function Footer() {
 
   return (
     <FooterFrame>
-      <form action="https://forms.gle/DaLuqvJsVhVaAM3J9" target="_blank">
+      <form action="https://forms.gle/sPuSh2NpLk6eh8rq7" target="_blank">
         <ButtonSecondary p="8px 12px">
           <Send size={16} style={{ marginRight: '8px' }} /> Feedback
         </ButtonSecondary>

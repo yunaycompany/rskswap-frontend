@@ -3,8 +3,8 @@ import KOVAN_TOKENS from './kovan'
 import MAINNET_TOKENS from './mainnet'
 import RINKEBY_TOKENS from './rinkeby'
 import ROPSTEN_TOKENS from './ropsten'
-import RSKTESTNET_TOKENS from './rsktestnet'
 import RSKMAINNET_TOKENS from './rskmainnet'
+import RSKTESTNET_TOKENS from './rsktestnet'
 
 type AllTokens = Readonly<{ [chainId in number]: Readonly<{ [tokenAddress: string]: Token }> }>
 export const ALL_TOKENS: AllTokens = [
@@ -15,8 +15,8 @@ export const ALL_TOKENS: AllTokens = [
   ...RINKEBY_TOKENS,
   ...KOVAN_TOKENS,
   ...ROPSTEN_TOKENS,
-  ...RSKTESTNET_TOKENS,
-  ...RSKMAINNET_TOKENS
+  ...RSKMAINNET_TOKENS,
+  ...RSKTESTNET_TOKENS
 ]
   // remap WETH to ETH
   .map(token => {

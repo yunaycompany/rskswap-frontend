@@ -6,33 +6,7 @@ import { BigNumber } from '@ethersproject/bignumber'
 import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUniswapV2Router02.json'
 import { ROUTER_ADDRESS } from '../constants'
 import { ALL_TOKENS } from '../constants/tokens'
-import { ChainId, JSBI, Percent, TokenAmount, Token } from 'uniswap-sdk-rsk'
-import { arrayify, isHexString } from '@ethersproject/bytes'
-import { keccak256 } from '@ethersproject/keccak256'
-
-function getChecksumAddress(address: string): string {
-  if (!isHexString(address, 20)) {
-    throw Error('invalid address ' + address)
-  }
-  address = address.toLowerCase()
-  const chars = address.substring(2).split('')
-
-  const expanded = new Uint8Array(40)
-  for (let i = 0; i < 40; i++) {
-    expanded[i] = chars[i].charCodeAt(0)
-  }
-
-  const hashed = arrayify(keccak256(expanded))
-  for (let i = 0; i < 40; i += 2) {
-    if (hashed[i >> 1] >> 4 >= 8) {
-      chars[i] = chars[i].toUpperCase()
-    }
-    if ((hashed[i >> 1] & 0x0f) >= 8) {
-      chars[i + 1] = chars[i + 1].toUpperCase()
-    }
-  }
-  return '0x' + chars.join('')
-}
+import { ChainId, JSBI, Percent, TokenAmount, Token, getChecksumAddress } from 'uniswap-sdk-rsk'
 
 // returns the checksummed address if the address is valid, otherwise returns false
 export function isAddress(value: any): string | false {
