@@ -12,11 +12,11 @@ import Card, { GreyCard } from '../Card'
 import TokenLogo from '../TokenLogo'
 import DoubleLogo from '../DoubleLogo'
 import { Text } from 'rebass'
-import { ExternalLink } from '../../theme/components'
+// import { ExternalLink } from '../../theme/components'
 import { AutoColumn } from '../Column'
 import { ChevronDown, ChevronUp } from 'react-feather'
 import { ButtonSecondary } from '../Button'
-import { RowBetween, RowFixed, AutoRow } from '../Row'
+import { RowBetween, RowFixed } from '../Row'
 import { Dots } from '../swap/styleds'
 
 export const FixedHeightRow = styled(RowBetween)`
@@ -198,11 +198,11 @@ function PositionCard({ pair, history, border, minimal = false }: PositionCardPr
                 </Text>
               </FixedHeightRow>
 
-              <AutoRow justify="center" marginTop={'10px'}>
+              {/* <AutoRow justify="center" marginTop={'10px'}>
                 <ExternalLink href={`https://uniswap.info/pair/${pair?.liquidityToken.address}`}>
                   View pool information ↗
                 </ExternalLink>
-              </AutoRow>
+              </AutoRow> */}
               <RowBetween marginTop="10px">
                 <ButtonSecondary
                   width="48%"

@@ -1,12 +1,12 @@
-import { ChainId, Pair, Token } from 'uniswap-sdk-rsk'
-import React, { useContext, useMemo } from 'react'
+// import { ChainId, Pair, Token } from 'uniswap-sdk-rsk'
+import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import { useMediaLayout } from 'use-media'
 
 import { X } from 'react-feather'
 import { PopupContent } from '../../state/application/actions'
 import { useActivePopups, useRemovePopup } from '../../state/application/hooks'
-import { ExternalLink } from '../../theme'
+// import { ExternalLink } from '../../theme'
 import { AutoColumn } from '../Column'
 import DoubleTokenLogo from '../DoubleLogo'
 import Row from '../Row'
@@ -79,14 +79,14 @@ function PoolPopup({
   token0: { address?: string; symbol?: string }
   token1: { address?: string; symbol?: string }
 }) {
-  const pairAddress: string | null = useMemo(() => {
-    if (!token0 || !token1) return null
-    // just mock it out
-    return Pair.getAddress(
-      new Token(ChainId.MAINNET, token0.address, 18),
-      new Token(ChainId.MAINNET, token1.address, 18)
-    )
-  }, [token0, token1])
+  // const pairAddress: string | null = useMemo(() => {
+  //   if (!token0 || !token1) return null
+  //   // just mock it out
+  //   return Pair.getAddress(
+  //     new Token(ChainId.MAINNET, token0.address, 18),
+  //     new Token(ChainId.MAINNET, token1.address, 18)
+  //   )
+  // }, [token0, token1])
 
   return (
     <AutoColumn gap={'10px'}>
@@ -99,9 +99,9 @@ function PoolPopup({
           UNI {token0?.symbol} / {token1?.symbol}
         </Text>
       </Row>
-      {pairAddress ? (
+      {/* {pairAddress ? (
         <ExternalLink href={`https://uniswap.info/pair/${pairAddress}`}>View on Uniswap Info.</ExternalLink>
-      ) : null}
+      ) : null} */}
     </AutoColumn>
   )
 }

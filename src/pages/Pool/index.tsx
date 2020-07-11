@@ -43,34 +43,28 @@ export default function Pool({ history }: RouteComponentProps) {
     account,
     V2DummyPairs?.map(p => p.liquidityToken)
   )
-  console.log('V2DummyPairs', V2DummyPairs)
+
   // fetch the reserves for all V2 pools in which the user has a balance
   const V2DummyPairsWithABalance = V2DummyPairs.filter(
     V2DummyPair =>
       V2PairsBalances[V2DummyPair.liquidityToken.address] &&
       JSBI.greaterThan(V2PairsBalances[V2DummyPair.liquidityToken.address].raw, JSBI.BigInt(0))
   )
-  console.log('V2DummyPairsWithABalance', V2DummyPairsWithABalance)
+
   const V2Pairs = usePairs(
     V2DummyPairsWithABalance.map(V2DummyPairWithABalance => [
       V2DummyPairWithABalance.token0,
       V2DummyPairWithABalance.token1
     ])
   )
-  console.log('V2Pairs', V2Pairs)
-  console.log('fetchingV2PairBalances', fetchingV2PairBalances)
-  console.log('V2Pairs?.length < V2DummyPairsWithABalance.length', V2Pairs?.length < V2DummyPairsWithABalance.length)
-  console.log(
-    'V2Pairs?.some(V2Pair => !!!V2Pair)',
-    V2Pairs?.some(V2Pair => !!!V2Pair)
-  )
+
   const V2IsLoading =
     fetchingV2PairBalances || V2Pairs?.length < V2DummyPairsWithABalance.length || V2Pairs?.some(V2Pair => !!!V2Pair)
-  console.log('V2IsLoading', V2IsLoading)
+
   const allV2PairsWithLiquidity = V2Pairs.filter(V2Pair => !!V2Pair).map(V2Pair => (
     <PositionCard key={V2Pair.liquidityToken.address} pair={V2Pair} />
   ))
-  console.log('allV2PairsWithLiquidity', allV2PairsWithLiquidity)
+
   const hasV1Liquidity = useUserHasLiquidityInAllTokens()
 
   const handleSearchDismiss = useCallback(() => {

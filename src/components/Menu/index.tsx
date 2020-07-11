@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import { Info, BookOpen, Code, PieChart } from 'react-feather'
+import { Info, BookOpen, Code } from 'react-feather'
 import styled from 'styled-components'
 import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
 import useToggle from '../../hooks/useToggle'
@@ -109,11 +109,11 @@ export default function Menu() {
       </StyledMenuButton>
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://uniswap.org/">
+          <MenuItem id="link" href="https://uniswap-org-rsk.web.app/">
             <Info size={14} />
             About
           </MenuItem>
-          <MenuItem id="link" href="https://uniswap.org/docs/v2">
+          <MenuItem id="link" href="https://uniswap-org-rsk.web.app/docs/v2">
             <BookOpen size={14} />
             Docs
           </MenuItem>
@@ -124,11 +124,11 @@ export default function Menu() {
           {/* <MenuItem id="link" href="https://discord.gg/vXCdddD">
             <MessageCircle size={14} />
             Discord
-          </MenuItem> */}
+          </MenuItem> 
           <MenuItem id="link" href="https://uniswap.info/">
             <PieChart size={14} />
             Analytics
-          </MenuItem>
+          </MenuItem>*/}
         </MenuFlyout>
       )}
     </StyledMenu>
