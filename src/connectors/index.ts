@@ -20,7 +20,7 @@ export const network = new NetworkConnector({
 })
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [30, 31, 1] //supportedChainIds: [1, 3, 4, 5, 42]
+  supportedChainIds: [30, 31] //supportedChainIds: [1, 3, 4, 5, 42]
 })
 
 // mainnet only

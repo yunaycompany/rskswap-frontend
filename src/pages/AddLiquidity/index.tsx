@@ -198,7 +198,7 @@ export default function AddLiquidity({ match: { params } }: RouteComponentProps<
         <LightCard mt="20px" borderRadius="20px">
           <RowFlat>
             <Text fontSize="48px" fontWeight={500} lineHeight="42px" marginRight={10}>
-              {tokens[Field.TOKEN_A]?.symbol + '/' + tokens[Field.TOKEN_B]?.symbol}
+              {tokens[Field.TOKEN_A]?.symbol + ' / ' + tokens[Field.TOKEN_B]?.symbol}
             </Text>
             <DoubleLogo a0={tokens[Field.TOKEN_A]?.address} a1={tokens[Field.TOKEN_B]?.address} size={30} />
           </RowFlat>

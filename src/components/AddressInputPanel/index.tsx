@@ -174,7 +174,7 @@ export default function AddressInputPanel({
               autoCorrect="off"
               autoCapitalize="off"
               spellCheck="false"
-              placeholder="Wallet Address or ENS name"
+              placeholder="Wallet Address"
               error={input !== '' && error}
               onChange={onInput}
               value={input}
