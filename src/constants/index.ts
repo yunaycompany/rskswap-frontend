@@ -78,8 +78,8 @@ const TESTNET_CAPABLE_WALLETS = {
   },
   METAMASK: {
     connector: injected,
-    name: 'MetaMask',
-    iconName: 'metamask.png',
+    name: 'MetaMask / Nifty Wallet',
+    iconName: 'metamasknifty.png',
     description: 'Easy-to-use browser extension.',
     href: null,
     color: '#E8831D'

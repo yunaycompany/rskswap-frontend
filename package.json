@@ -1,7 +1,7 @@
 {
   "name": "uniswap-frontend-rsk",
   "description": "Uniswap RSK Interface",
-  "homepage": "https://uniswap.exchange",
+  "homepage": "https://app.uniswap-rsk.com",
   "private": true,
   "devDependencies": {
     "@ethersproject/address": "^5.0.0-beta.134",

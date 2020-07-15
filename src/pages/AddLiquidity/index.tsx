@@ -152,13 +152,15 @@ export default function AddLiquidity({ match: { params } }: RouteComponentProps<
       ]
       value = null
     }
+    const gasPrice = await router.provider.getGasPrice()
 
     setAttemptingTxn(true)
     await estimate(...args, value ? { value } : {})
       .then(estimatedGasLimit =>
         method(...args, {
           ...(value ? { value } : {}),
-          gasLimit: calculateGasMargin(estimatedGasLimit)
+          gasLimit: calculateGasMargin(estimatedGasLimit),
+          gasPrice: gasPrice
         }).then(response => {
           setAttemptingTxn(false)
 

@@ -3,7 +3,7 @@
   "wrongNetwork": "נבחרה רשת לא נכונה",
   "switchNetwork": "{{ correctNetwork }} יש צורך לשנות את הרשת ל",
   "installWeb3MobileBrowser": "יש צורך בארנק ווב3.0, תתקין מטאמאסק או ארנק דומה",
-  "installMetamask": " Metamask יש צורך להתקין תוסף מטאמאסק לדפדפן, חפשו בגוגל ",
+  "installMetamask": " Metamask/Nifty Wallet יש צורך להתקין תוסף מטאמאסק לדפדפן, חפשו בגוגל ",
   "disconnected": "מנותק",
   "swap": "המרה",
   "send": "שליחה",

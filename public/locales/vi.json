@@ -3,7 +3,7 @@
 	"wrongNetwork": "Kết nối mạng không đúng",
 	"switchNetwork": "Vui lòng chuyển sang {{ correctNetwork }}",
 	"installWeb3MobileBrowser": "Vui lòng truy cập từ trình duyệt di động hỗ trợ web3 như là Ví Trust hoặc Ví Coinbase",
-	"installMetamask": "Vui lòng truy cập sau khi cài đặt Metamask trên Chrome hoặc Brave.",
+	"installMetamask": "Vui lòng truy cập sau khi cài đặt Metamask/Nifty Wallet trên Chrome hoặc Brave.",
 	"disconnected": "Ngắt kết nối rồi",
 	"swap": "Hoán đổi",
 	"swapAnyway": "Tiếp tục hoán đổi?",

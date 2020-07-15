@@ -8,15 +8,15 @@ import styled from 'styled-components'
 
 import Logo from '../../assets/svg/uni.inline.svg'
 import LogoDark from '../../assets/svg/unidark.inline.svg'
-import Wordmark from '../../assets/svg/wordmark.svg'
-import WordmarkDark from '../../assets/svg/wordmark_white.svg'
+import Wordmark from '../../assets/svg/rskfont1_green.svg'
+import WordmarkDark from '../../assets/svg/rskfont1_white.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
 import { useTokenBalanceTreatingWETHasETH } from '../../state/wallet/hooks'
 
-//import { ExternalLink, StyledInternalLink } from '../../theme'
+import { ExternalLink } from '../../theme'
 import { YellowCard } from '../Card'
-//import { AutoColumn } from '../Column'
+import { AutoColumn } from '../Column'
 import Settings from '../Settings'
 import Menu from '../Menu'
 
@@ -100,25 +100,25 @@ const UniIcon = styled(HistoryLink)<{ to: string }>`
   }
 `
 
-// const MigrateBanner = styled(AutoColumn)`
-//   width: 100%;
-//   padding: 12px 0;
-//   display: flex;
-//   justify-content: center;
-//   background-color: ${({ theme }) => theme.primary5};
-//   color: ${({ theme }) => theme.primaryText1};
-//   font-weight: 400;
-//   text-align: center;
-//   pointer-events: auto;
-//   a {
-//     color: ${({ theme }) => theme.primaryText1};
-//   }
+const MigrateBanner = styled(AutoColumn)`
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.bg2};
+  color: ${({ theme }) => theme.primaryText1};
+  font-weight: 400;
+  text-align: center;
+  pointer-events: auto;
+  a {
+    color: ${({ theme }) => theme.primaryText1};
+  }
 
-//   ${({ theme }) => theme.mediaWidth.upToSmall`
-//     padding: 0;
-//     display: none;
-//   `};
-// `
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+    padding: 0;
+    display: none;
+  `};
+`
 
 const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.MAINNET]: 'Ethereum',
@@ -144,17 +144,16 @@ export default function Header() {
 
   return (
     <HeaderFrame>
-      {/* <MigrateBanner>
-        Uniswap V2 is live! Read the&nbsp;
-        <ExternalLink href="https://uniswap.org/blog/launch-uniswap-v2/">
-          <b>blog post ↗</b>
+      <MigrateBanner>
+        Uniswap RSK is live! Read the&nbsp;
+        <ExternalLink href="https://uniswap-rsk.com/docs/v2/">
+          <b>documentation ↗</b>
         </ExternalLink>
-        &nbsp;or&nbsp;
-        <StyledInternalLink to="/migrate/v1">
-          <b>migrate your liquidity ↗</b>
-        </StyledInternalLink>
-        .
-      </MigrateBanner> */}
+        &nbsp; Uniswap RSK is a fork of the &nbsp;
+        <ExternalLink href="https://uniswap.org/">
+          <b>Uniswap V2 Protocol ↗</b>
+        </ExternalLink>
+      </MigrateBanner>
       <RowBetween padding="1rem">
         <HeaderElement>
           <Title>

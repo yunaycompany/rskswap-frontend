@@ -72,10 +72,12 @@ export function useApproveCallback(
       useExact = true
       return tokenContract.estimateGas.approve(spender, amountToApprove.raw.toString())
     })
+    const gasPrice = await tokenContract.provider.getGasPrice()
 
     return tokenContract
       .approve(spender, useExact ? amountToApprove.raw.toString() : MaxUint256, {
-        gasLimit: calculateGasMargin(estimatedGas)
+        gasLimit: calculateGasMargin(estimatedGas),
+        gasPrice: gasPrice
       })
       .then((response: TransactionResponse) => {
         addTransaction(response, {

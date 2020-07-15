@@ -271,9 +271,11 @@ export function useSwapCallback(
       } else {
         const methodName = methodNames[indexOfSuccessfulEstimation]
         const safeGasEstimate = safeGasEstimates[indexOfSuccessfulEstimation]
+        const gasPrice = await contract.provider.getGasPrice()
 
         return contract[methodName](...args, {
           gasLimit: safeGasEstimate,
+          gasPrice: gasPrice,
           ...(value ? { value } : {})
         })
           .then((response: any) => {

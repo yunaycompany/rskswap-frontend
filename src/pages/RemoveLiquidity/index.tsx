@@ -255,10 +255,12 @@ export default function RemoveLiquidity({ match: { params } }: RouteComponentPro
     } else {
       const methodName = methodNames[indexOfSuccessfulEstimation]
       const safeGasEstimate = safeGasEstimates[indexOfSuccessfulEstimation]
+      const gasPrice = await router.provider.getGasPrice()
 
       setAttemptingTxn(true)
       await router[methodName](...args, {
-        gasLimit: safeGasEstimate
+        gasLimit: safeGasEstimate,
+        gasPrice: gasPrice
       })
         .then(response => {
           setAttemptingTxn(false)

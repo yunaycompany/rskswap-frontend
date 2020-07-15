@@ -80,7 +80,7 @@ const IconWrapper = styled.div<{ size?: number }>`
   & > img,
   span {
     height: ${({ size }) => (size ? size + 'px' : '24px')};
-    width: ${({ size }) => (size ? size + 'px' : '24px')};
+    width: ${({ size }) => (size ? size + 'px' : '48px')};
   }
   ${({ theme }) => theme.mediaWidth.upToMedium`
     align-items: flex-end;

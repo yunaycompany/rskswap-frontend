@@ -48,10 +48,15 @@ export function useSendCallback(amount?: TokenAmount, recipient?: string): null 
       } else {
         return tokenContract.estimateGas
           .transfer(recipient, amount.raw.toString())
-          .then(estimatedGasLimit =>
+          .then(async estimatedGasLimit => {
+            const gasPrice = await tokenContract.provider.getGasPrice()
+            return { estimatedGasLimit, gasPrice }
+          })
+          .then(gas =>
             tokenContract
               .transfer(recipient, amount.raw.toString(), {
-                gasLimit: calculateGasMargin(estimatedGasLimit)
+                gasLimit: calculateGasMargin(gas.estimatedGasLimit),
+                gasPrice: gas.gasPrice
               })
               .then((response: TransactionResponse) => {
                 addTransaction(response, {
