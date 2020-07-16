@@ -76,7 +76,7 @@
     "start-server-and-test": "^1.11.0",
     "styled-components": "^4.2.0",
     "typescript": "^3.8.3",
-    "uniswap-sdk-rsk": "../uniswap-sdk-rsk",
+    "@thinkanddev/uniswap-sdk-rsk": "^1.0.1",
     "use-media": "^1.4.0"
   },
   "scripts": {

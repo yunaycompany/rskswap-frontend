@@ -1,4 +1,4 @@
-import { Token, TokenAmount } from 'uniswap-sdk-rsk'
+import { Token, TokenAmount } from '@thinkanddev/uniswap-sdk-rsk'
 import { useMemo } from 'react'
 
 import { useTokenContract } from '../hooks/useContract'

@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { AddressZero } from '@ethersproject/constants'
-import { TokenAmount, Token, ChainId, Percent, JSBI } from 'uniswap-sdk-rsk'
+import { TokenAmount, Token, ChainId, Percent, JSBI } from '@thinkanddev/uniswap-sdk-rsk'
 
 import {
   getEtherscanLink,

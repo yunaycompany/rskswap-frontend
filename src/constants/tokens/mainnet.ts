@@ -1,4 +1,4 @@
-import { Token, ChainId } from 'uniswap-sdk-rsk'
+import { Token, ChainId } from '@thinkanddev/uniswap-sdk-rsk'
 
 export default [
   new Token(ChainId.MAINNET, '0xB6eD7644C69416d67B522e20bC294A9a9B405B31', 8, '0xBTC', '0xBitcoin Token'),

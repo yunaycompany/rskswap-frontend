@@ -1,4 +1,4 @@
-import { Token, ChainId } from 'uniswap-sdk-rsk'
+import { Token, ChainId } from '@thinkanddev/uniswap-sdk-rsk'
 
 export default [
   new Token(ChainId.KOVAN, '0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa', 18, 'DAI', 'Dai Stablecoin'),

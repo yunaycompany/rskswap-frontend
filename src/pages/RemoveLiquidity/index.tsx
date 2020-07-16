@@ -1,6 +1,6 @@
 import { splitSignature } from '@ethersproject/bytes'
 import { Contract } from '@ethersproject/contracts'
-import { Percent, WETH } from 'uniswap-sdk-rsk'
+import { Percent, WETH } from '@thinkanddev/uniswap-sdk-rsk'
 import React, { useCallback, useContext, useState } from 'react'
 import { ArrowDown, Plus } from 'react-feather'
 import ReactGA from 'react-ga'

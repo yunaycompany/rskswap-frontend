@@ -1,4 +1,4 @@
-import { ChainId, Token, WETH } from 'uniswap-sdk-rsk'
+import { ChainId, Token, WETH } from '@thinkanddev/uniswap-sdk-rsk'
 import KOVAN_TOKENS from './kovan'
 import MAINNET_TOKENS from './mainnet'
 import RINKEBY_TOKENS from './rinkeby'

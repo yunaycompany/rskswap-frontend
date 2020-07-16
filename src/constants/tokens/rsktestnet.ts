@@ -1,4 +1,4 @@
-import { ChainId, Token } from 'uniswap-sdk-rsk'
+import { ChainId, Token } from '@thinkanddev/uniswap-sdk-rsk'
 
 export default [
   new Token(ChainId.RSK_TESTNET, '0x19F64674D8A5B4E652319F5e239eFd3bc969A1fE', 18, 'tRIF', 'tRIF Token'),

@@ -1,4 +1,4 @@
-import { JSBI, Token } from 'uniswap-sdk-rsk'
+import { JSBI, Token } from '@thinkanddev/uniswap-sdk-rsk'
 import React, { useCallback, useContext, useMemo, useState, useEffect } from 'react'
 import { ArrowLeft } from 'react-feather'
 import { RouteComponentProps } from 'react-router'

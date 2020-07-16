@@ -1,5 +1,5 @@
 import { TransactionResponse } from '@ethersproject/abstract-provider'
-import { JSBI, Token, TokenAmount, WETH, Fraction, Percent } from 'uniswap-sdk-rsk'
+import { JSBI, Token, TokenAmount, WETH, Fraction, Percent } from '@thinkanddev/uniswap-sdk-rsk'
 import React, { useCallback, useMemo, useState } from 'react'
 import { ArrowLeft } from 'react-feather'
 import ReactGA from 'react-ga'

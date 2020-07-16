@@ -1,4 +1,4 @@
-import { ChainId } from 'uniswap-sdk-rsk'
+import { ChainId } from '@thinkanddev/uniswap-sdk-rsk'
 import MULTICALL_ABI from './abi.json'
 
 const MULTICALL_NETWORKS: { [chainId in ChainId]: string } = {

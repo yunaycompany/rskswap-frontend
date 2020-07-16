@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from 'uniswap-sdk-rsk'
+import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from '@thinkanddev/uniswap-sdk-rsk'
 import { computeTradePriceBreakdown } from './prices'
 
 describe('prices', () => {

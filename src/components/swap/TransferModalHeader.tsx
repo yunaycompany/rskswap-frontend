@@ -1,4 +1,4 @@
-import { TokenAmount } from 'uniswap-sdk-rsk'
+import { TokenAmount } from '@thinkanddev/uniswap-sdk-rsk'
 import React from 'react'
 import { Text } from 'rebass'
 import { useActiveWeb3React } from '../../hooks'
