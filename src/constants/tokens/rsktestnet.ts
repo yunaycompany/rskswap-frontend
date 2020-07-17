@@ -9,6 +9,6 @@ export default [
   new Token(ChainId.RSK_TESTNET, '0x23A1aA7b11e68beBE560a36beC04D1f79357f28d', 18, 'RPRO', 'RIF PRO'),
   new Token(ChainId.RSK_TESTNET, '0x0d86FCA9Be034A363Cf12c9834Af08D54a10451C', 18, 'rKovDAI', 'Dai Stablecoin'),
   new Token(ChainId.RSK_TESTNET, '0x0a8d098e31A60DA2b9c874d97dE6e6B385C28E9D', 18, 'rKovTUSD', 'True USD'),
-  new Token(ChainId.RSK_TESTNET, '0x79055C1E06fBC5893D664D6e7521AA0BD9a514E9', 18, 'rKovWETH', 'Wrapped Ether'),
+  new Token(ChainId.RSK_TESTNET, '0xd15cDD74DfF1A6A81Ca639B038839B126BC01FF9', 18, 'rKovWETH', 'Wrapped Ether'),
   new Token(ChainId.RSK_TESTNET, '0x823b3d62Cb5a4ED97f26eD9888ea721b569Afe27', 18, 'rKovZRX', '0x Protocol')
 ]
