@@ -2342,6 +2342,16 @@
     redux-thunk "^2.3.0"
     reselect "^4.0.0"
 
+"@rsksmart/rsk-contract-metadata@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rsksmart/rsk-contract-metadata/-/rsk-contract-metadata-1.0.0.tgz#501a8f0aeca39bf847022728b3eff39122ea7ba8"
+  integrity sha512-3bb4+h5u7l61/eGgn7wndOnVCy0oUnhV6+x2bUFa62hT8Vm/JJ/A+YdfkudUhXe3hJFmqrp9CLWi/DfQR6tLfw==
+
+"@rsksmart/rsk-testnet-contract-metadata@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@rsksmart/rsk-testnet-contract-metadata/-/rsk-testnet-contract-metadata-1.0.1.tgz#2bdbe6072854676bcb3e6b4c5f80d6b34fbe1e3d"
+  integrity sha512-FbOkaY6DRCY7JTYHbB0y7+ZlbMMN6pCUWmuyEH5hYyF94Fu5wzbdHNDBjv4fudxS4VHxry9yVIwrxxbnlS4hCQ==
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"

@@ -17,6 +17,7 @@
     "@reach/dialog": "^0.10.3",
     "@reach/portal": "^0.10.3",
     "@reduxjs/toolkit": "^1.3.5",
+    "@thinkanddev/uniswap-sdk-rsk": "^1.0.1",
     "@types/jest": "^25.2.1",
     "@types/lodash.flatmap": "^4.5.6",
     "@types/node": "^13.13.5",
@@ -76,7 +77,6 @@
     "start-server-and-test": "^1.11.0",
     "styled-components": "^4.2.0",
     "typescript": "^3.8.3",
-    "@thinkanddev/uniswap-sdk-rsk": "^1.0.1",
     "use-media": "^1.4.0"
   },
   "scripts": {
@@ -108,6 +108,8 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
+    "@rsksmart/rsk-contract-metadata": "^1.0.0",
+    "@rsksmart/rsk-testnet-contract-metadata": "^1.0.1",
     "rskjs-util": "^1.0.3"
   }
 }

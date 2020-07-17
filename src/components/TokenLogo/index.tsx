@@ -4,8 +4,8 @@ import { isAddress } from '../../utils'
 import { useActiveWeb3React } from '../../hooks'
 import { WETH, ChainId } from '@thinkanddev/uniswap-sdk-rsk'
 import EthereumLogo from '../../assets/images/rbtc-logo.png' //import EthereumLogo from '../../assets/images/ethereum-logo.png'
-import contractMap from '../../constants/tokens/contract-map.json'
-import contractTestnetMap from '../../constants/tokens/contract-testnet-map.json'
+import contractMap from '@rsksmart/rsk-contract-metadata'
+import contractTestnetMap from '@rsksmart/rsk-testnet-contract-metadata'
 
 const toChecksumAddress = require('rskjs-util').toChecksumAddress
 
