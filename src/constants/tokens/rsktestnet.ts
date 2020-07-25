@@ -10,5 +10,8 @@ export default [
   new Token(ChainId.RSK_TESTNET, '0x0d86FCA9Be034A363Cf12c9834Af08D54a10451C', 18, 'rKovDAI', 'Dai Stablecoin'),
   new Token(ChainId.RSK_TESTNET, '0x0a8d098e31A60DA2b9c874d97dE6e6B385C28E9D', 18, 'rKovTUSD', 'True USD'),
   new Token(ChainId.RSK_TESTNET, '0xd15cDD74DfF1A6A81Ca639B038839B126BC01FF9', 18, 'rKovWETH', 'Wrapped Ether'),
-  new Token(ChainId.RSK_TESTNET, '0x823b3d62Cb5a4ED97f26eD9888ea721b569Afe27', 18, 'rKovZRX', '0x Protocol')
+  new Token(ChainId.RSK_TESTNET, '0x823b3d62Cb5a4ED97f26eD9888ea721b569Afe27', 18, 'rKovZRX', '0x Protocol'),
+  new Token(ChainId.RSK_TESTNET, '0x8bBbd80981FE76d44854D8DF305e8985c19f0e78', 18, 'rKovLINK', 'ChainLink Token'),
+  new Token(ChainId.RSK_TESTNET, '0x6117C9529F15c52e2d3188d5285C745B757b5825', 18, 'rKovUSDC', 'USD Coin'),
+  new Token(ChainId.RSK_TESTNET, '0xcdc8ccBbFB6407c53118fE47259e8d00C81F42CD', 18, 'rKovUSDT', 'Tether USD')
 ]

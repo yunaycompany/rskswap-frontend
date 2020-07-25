@@ -88,7 +88,22 @@ const TESTNET_CAPABLE_WALLETS = {
 
 export const SUPPORTED_WALLETS =
   process.env.REACT_APP_CHAIN_ID !== '1'
-    ? TESTNET_CAPABLE_WALLETS
+    ? process.env.REACT_APP_CHAIN_ID === '30'
+      ? {
+          ...TESTNET_CAPABLE_WALLETS,
+          ...{
+            WALLET_CONNECT: {
+              connector: walletconnect,
+              name: 'WalletConnect',
+              iconName: 'walletConnectIcon.svg',
+              description: 'Connect to Trust Wallet, Rainbow Wallet and more...',
+              href: null,
+              color: '#4196FC',
+              mobile: true
+            }
+          }
+        }
+      : TESTNET_CAPABLE_WALLETS
     : {
         ...TESTNET_CAPABLE_WALLETS,
         ...{

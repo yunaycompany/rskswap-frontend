@@ -34,14 +34,14 @@ yarn start
 
 To have the frontend default to a different network, make a copy of `.env` named `.env.local`, 
 change `REACT_APP_NETWORK_ID` to `"{yourNetworkId}"`, and change `REACT_APP_NETWORK_URL` to e.g. 
-`"https://{yourNetwork}.infura.io/v3/{yourKey}"`. 
+`"https://public-node.testnet.rsk"`. 
 
 Note that the front end only works properly on testnets where both 
-[Uniswap V2](https://uniswap-rsk.com/docs/v2/smart-contracts/factory/) and 
-[multicall](https://github.com/makerdao/multicall) are deployed.
+[Uniswap V2 RSK](https://uniswap-rsk.com/docs/v2/smart-contracts/factory/) and 
+[multicall](https://github.com/Think-and-Dev/multicall) are deployed.
 The frontend will not work on other networks.
 
 ## Contributions
 
-**Please open all pull requests against the `v2` branch.** 
+**Please open all pull requests against the `v2-rsk` branch.** 
 CI checks will run against all PRs. 
