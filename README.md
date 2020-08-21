@@ -6,13 +6,13 @@ This is a fork of the Uniswap Protocol adapted to the RSK Network
 
 An open source interface for Uniswap -- a protocol for decentralized exchange of Ethereum tokens.
 
-- Website: [uniswap-rsk.com](https://uniswap-rsk.com/)
-- Docs: [uniswap-rsk.com/docs/](https://uniswap-rsk.com/docs/)
+- Website: [rskswap.com](https://rskswap.com/)
+- Docs: [rskswap.com/docs/](https://rskswap.com/docs/)
 - Whitepaper: [Link](https://hackmd.io/C-DvwDSfSxuh-Gd4WKE_ig)
 
 ## Accessing the frontend
 
-To access the front end visit [app.uniswap-rsk.com](https://app.uniswap-rsk.com).
+To access the front end visit [app.rskswap.com](https://app.rskswap.com).
 
 ## Development
 
@@ -37,7 +37,7 @@ change `REACT_APP_NETWORK_ID` to `"{yourNetworkId}"`, and change `REACT_APP_NETW
 `"https://public-node.testnet.rsk"`. 
 
 Note that the front end only works properly on testnets where both 
-[Uniswap V2 RSK](https://uniswap-rsk.com/docs/v2/smart-contracts/factory/) and 
+[Uniswap V2 RSK](https://rskswap.com/docs/v2/smart-contracts/factory/) and 
 [multicall](https://github.com/Think-and-Dev/multicall) are deployed.
 The frontend will not work on other networks.
 

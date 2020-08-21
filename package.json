@@ -1,7 +1,7 @@
 {
   "name": "uniswap-frontend-rsk",
   "description": "Uniswap RSK Interface",
-  "homepage": "https://app.uniswap-rsk.com",
+  "homepage": "https://app.rskswap.com",
   "private": true,
   "devDependencies": {
     "@ethersproject/address": "^5.0.0-beta.134",
@@ -108,7 +108,7 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@rsksmart/rsk-contract-metadata": "^1.0.0",
+    "@rsksmart/rsk-contract-metadata": "^1.0.1",
     "@rsksmart/rsk-testnet-contract-metadata": "^1.0.1",
     "rskjs-util": "^1.0.3"
   }

@@ -146,7 +146,7 @@ export default function Header() {
     <HeaderFrame>
       <MigrateBanner>
         Uniswap RSK is live! Read the&nbsp;
-        <ExternalLink href="https://uniswap-rsk.com/docs/v2/">
+        <ExternalLink href="https://rskswap.com/docs/v2/">
           <b>documentation ↗</b>
         </ExternalLink>
         &nbsp; Uniswap RSK is a fork of the &nbsp;

@@ -109,11 +109,11 @@ export default function Menu() {
       </StyledMenuButton>
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://uniswap-rsk.com/">
+          <MenuItem id="link" href="https://rskswap.com/">
             <Info size={14} />
             About
           </MenuItem>
-          <MenuItem id="link" href="https://uniswap-rsk.com/docs/v2">
+          <MenuItem id="link" href="https://rskswapcom/docs/v2">
             <BookOpen size={14} />
             Docs
           </MenuItem>
