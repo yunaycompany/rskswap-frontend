@@ -10,14 +10,17 @@ import contractTestnetMap from '@rsksmart/rsk-testnet-contract-metadata'
 const toChecksumAddress = require('rskjs-util').toChecksumAddress
 
 const getTokenLogoURL = (address, chainId) => {
-  let logo = `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`
+  let logo = ''
   if (chainId === ChainId.RSK_MAINNET) {
     const metadata = contractMap[toChecksumAddress(address, chainId)]
-    logo = `https://raw.githubusercontent.com/rsksmart/rsk-contract-metadata/master/images/${metadata.logo}`
-  }
-  if (chainId === ChainId.RSK_TESTNET) {
+    if (metadata)
+      logo = `https://raw.githubusercontent.com/rsksmart/rsk-contract-metadata/master/images/${metadata.logo}`
+  } else if (chainId === ChainId.RSK_TESTNET) {
     const metadata = contractTestnetMap[toChecksumAddress(address, chainId)]
-    logo = `https://raw.githubusercontent.com/rsksmart/rsk-testnet-contract-metadata/master/images/${metadata.logo}`
+    if (metadata)
+      logo = `https://raw.githubusercontent.com/rsksmart/rsk-testnet-contract-metadata/master/images/${metadata.logo}`
+  } else {
+    logo = `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`
   }
   return logo
 }
@@ -67,7 +70,8 @@ export default function TokenLogo({
     return <StyledEthereumLogo src={EthereumLogo} size={size} {...rest} />
   } else if (!NO_LOGO_ADDRESSES[address] && validated) {
     path = getTokenLogoURL(validated, chainId)
-  } else {
+  }
+  if (path === '') {
     return (
       <Emoji {...rest} size={size}>
         <span role="img" aria-label="Thinking">
