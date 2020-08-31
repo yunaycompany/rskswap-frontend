@@ -8,8 +8,8 @@ import styled from 'styled-components'
 
 import Logo from '../../assets/svg/uni.inline.svg'
 import LogoDark from '../../assets/svg/unidark.inline.svg'
-import Wordmark from '../../assets/svg/rskfont1_green.svg'
-import WordmarkDark from '../../assets/svg/rskfont1_white.svg'
+import Wordmark from '../../assets/svg/rskswap_green.svg'
+import WordmarkDark from '../../assets/svg/rskswap_white.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
 import { useTokenBalanceTreatingWETHasETH } from '../../state/wallet/hooks'
@@ -145,11 +145,11 @@ export default function Header() {
   return (
     <HeaderFrame>
       <MigrateBanner>
-        Uniswap RSK is live! Read the&nbsp;
+        RSK Swap is live! Read the&nbsp;
         <ExternalLink href="https://rskswap.com/docs/v2/">
           <b>documentation ↗</b>
         </ExternalLink>
-        &nbsp; Uniswap RSK is a fork of the &nbsp;
+        &nbsp;RSK Swap is a fork of the &nbsp;
         <ExternalLink href="https://uniswap.org/">
           <b>Uniswap V2 Protocol ↗</b>
         </ExternalLink>

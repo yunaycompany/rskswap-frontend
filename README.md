@@ -1,4 +1,4 @@
-# Uniswap RSK Frontend
+# RSK Swao Frontend
 This is a fork of the Uniswap Protocol adapted to the RSK Network
 
 [![Tests](https://github.com/Think-and-Dev/uniswap-frontend-rsk/workflows/Tests/badge.svg)](https://github.com/Think-and-Dev/uniswap-frontend-rsk/actions?query=workflow%3ATests)
