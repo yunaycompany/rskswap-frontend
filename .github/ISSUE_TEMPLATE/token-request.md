@@ -18,7 +18,7 @@ Uniswap Exchange Address of Token:
 Link to the official homepage of token:
 Link to CoinMarketCap or CoinGecko page of token:
 
-Some tokens (e.g. BNB) do not work with Uniswap v1. In order to assess if your token works correctly, please complete small-value transactions of each of the types below, and submit the Etherscan transaction links for our review.
+Some tokens (e.g. BNB) do not work with Uniswap v1. In order to assess if your token works correctly, please complete small-value transactions of each of the types below, and submit the Explorer transaction links for our review.
 Test `addLiquidity` transaction: 
 Test `swap` transaction: 
 Test `removeLiquidity` transaction: 
