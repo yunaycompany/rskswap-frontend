@@ -1,7 +1,7 @@
 # RSK Swao Frontend
 This is a fork of the Uniswap Protocol adapted to the RSK Network
 
-[![Tests](https://github.com/Think-and-Dev/uniswap-frontend-rsk/workflows/Tests/badge.svg)](https://github.com/Think-and-Dev/uniswap-frontend-rsk/actions?query=workflow%3ATests)
+[![Tests](https://github.com/Think-and-Dev/rskswap-frontend/workflows/Tests/badge.svg)](https://github.com/Think-and-Dev/rskswap-frontend/actions?query=workflow%3ATests)
 [![Styled With Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 
 An open source interface for Uniswap -- a protocol for decentralized exchange of Ethereum tokens.

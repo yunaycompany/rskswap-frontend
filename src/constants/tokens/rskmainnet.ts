@@ -7,5 +7,6 @@ export default [
   new Token(ChainId.RSK_MAINNET, '0xE0cfF8a40F540657C62eB4CAC34b915e5Ed8D8Ff', 18, 'INV', 'Invecoin'),
   new Token(ChainId.RSK_MAINNET, '0x6B1A73d547F4009a26B8485B63d7015d248Ad406', 18, 'rDAI', 'Dai Stablecoin'),
   new Token(ChainId.RSK_MAINNET, '0x2d919F19D4892381D58edeBeca66D5642Cef1a1f', 18, 'RDOC', 'RIF Dollar on Chain'),
-  new Token(ChainId.RSK_MAINNET, '0xf4d27c56595Ed59B66cC7F03CFF5193e4bd74a61', 18, 'RPRO', 'RIF Pro')
+  new Token(ChainId.RSK_MAINNET, '0xf4d27c56595Ed59B66cC7F03CFF5193e4bd74a61', 18, 'RPRO', 'RIF Pro'),
+  new Token(ChainId.RSK_MAINNET, '0x73c08467E23F7DCB7dDBbc8d05041B74467A498A', 18, 'rFLIXX', 'Flixxo')
 ]

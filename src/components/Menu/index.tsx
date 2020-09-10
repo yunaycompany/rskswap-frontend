@@ -77,7 +77,7 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
-const CODE_LINK = 'https://github.com/Think-and-Dev/uniswap-frontend-rsk'
+const CODE_LINK = 'https://github.com/Think-and-Dev/rskswap-frontend'
 
 export default function Menu() {
   const node = useRef<HTMLDivElement>()
