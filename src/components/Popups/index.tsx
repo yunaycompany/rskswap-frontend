@@ -1,4 +1,4 @@
-// import { ChainId, Pair, Token } from '@thinkanddev/uniswap-sdk-rsk'
+// import { ChainId, Pair, Token } from '@thinkanddev/rskswap-sdk'
 import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import { useMediaLayout } from 'use-media'

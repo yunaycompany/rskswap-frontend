@@ -1,4 +1,4 @@
-import { JSBI, Pair, Token, TokenAmount, WETH } from '@thinkanddev/uniswap-sdk-rsk'
+import { JSBI, Pair, Token, TokenAmount, WETH } from '@thinkanddev/rskswap-sdk'
 import React, { useCallback, useEffect, useState } from 'react'
 import { Plus } from 'react-feather'
 import { Text } from 'rebass'

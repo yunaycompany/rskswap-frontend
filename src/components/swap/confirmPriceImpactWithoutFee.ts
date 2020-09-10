@@ -1,5 +1,5 @@
 // gathers additional user consent for a high price impact
-import { Percent } from '@thinkanddev/uniswap-sdk-rsk'
+import { Percent } from '@thinkanddev/rskswap-sdk'
 import { ALLOWED_PRICE_IMPACT_HIGH, PRICE_IMPACT_WITHOUT_FEE_CONFIRM_MIN } from '../../constants'
 
 export default function confirmPriceImpactWithoutFee(priceImpactWithoutFee: Percent): boolean {

@@ -1,5 +1,5 @@
 import { parseBytes32String } from '@ethersproject/strings'
-import { Token, WETH } from '@thinkanddev/uniswap-sdk-rsk'
+import { Token, WETH } from '@thinkanddev/rskswap-sdk'
 import { useMemo } from 'react'
 import { ALL_TOKENS } from '../constants/tokens'
 import { NEVER_RELOAD, useSingleCallResult } from '../state/multicall/hooks'

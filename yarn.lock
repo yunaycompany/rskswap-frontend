@@ -2342,10 +2342,10 @@
     redux-thunk "^2.3.0"
     reselect "^4.0.0"
 
-"@rsksmart/rsk-contract-metadata@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@rsksmart/rsk-contract-metadata/-/rsk-contract-metadata-1.0.1.tgz#d6c8e00f526d53cbbad31ebf104ef1641f6a557b"
-  integrity sha512-sihSrMDRQsH9q1fbEkCxoqmDocGhrsHl24D+ejzpNMDLGJWfj/3t8WMIju+geSDA1qEkEC8trim0CDoACDROIw==
+"@rsksmart/rsk-contract-metadata@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@rsksmart/rsk-contract-metadata/-/rsk-contract-metadata-1.0.2.tgz#3b90ebe7223b4458c52374151aadf79304217fe1"
+  integrity sha512-rlS9hEJit9g/ytdIoprKR/OYYX9P1pVIy0FPU3m1CqghaR9JvoTJFGUvqEA8AIqemLdrZbYRc22BB8Yw+ifSfA==
 
 "@rsksmart/rsk-testnet-contract-metadata@^1.0.1":
   version "1.0.1"
@@ -2561,10 +2561,10 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
-"@thinkanddev/uniswap-sdk-rsk@^1.0.1":
+"@thinkanddev/rskswap-sdk@^1.0.1":
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@thinkanddev/uniswap-sdk-rsk/-/uniswap-sdk-rsk-1.0.1.tgz#a3ad0efcbe2103ab90e8f73444116303ea86278f"
-  integrity sha512-1NYeOCKGcvaAMz512P5XqbaG3vzrJj+XreS2pxEB1+yL8IjyXzHX5nazphx4Gs+hiKarSeTiNH5kGicmaBpE3A==
+  resolved "https://registry.yarnpkg.com/@thinkanddev/rskswap-sdk/-/rskswap-sdk-1.0.1.tgz#2e5710590c25c2e5ceb128850c029d47d7e83a7c"
+  integrity sha512-zE7yxWNDJG7yjzSd+4cth8NhgkNE2QeqOIhbwtqRLs0MH0sP1O4sh97ZUAQHSOg5jikmFEgAKvHLsRez9YrglQ==
   dependencies:
     "@ethersproject/address" "^5.0.0-beta.134"
     "@ethersproject/contracts" "^5.0.0-beta.143"

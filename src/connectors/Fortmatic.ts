@@ -1,4 +1,4 @@
-import { ChainId } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId } from '@thinkanddev/rskswap-sdk'
 import { FortmaticConnector as FortmaticConnectorCore } from '@web3-react/fortmatic-connector'
 
 export const OVERLAY_READY = 'OVERLAY_READY'

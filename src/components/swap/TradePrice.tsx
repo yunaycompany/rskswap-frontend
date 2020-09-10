@@ -1,5 +1,5 @@
 import React from 'react'
-import { Price, Token } from '@thinkanddev/uniswap-sdk-rsk'
+import { Price, Token } from '@thinkanddev/rskswap-sdk'
 import { useContext } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'

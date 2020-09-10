@@ -1,4 +1,4 @@
-import { ChainId, WETH } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, WETH } from '@thinkanddev/rskswap-sdk'
 import { parse } from 'qs'
 import { Field } from './actions'
 import { queryParametersToSwapState } from './hooks'

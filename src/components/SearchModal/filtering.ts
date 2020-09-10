@@ -1,5 +1,5 @@
 import { isAddress } from '../../utils'
-import { Pair, Token } from '@thinkanddev/uniswap-sdk-rsk'
+import { Pair, Token } from '@thinkanddev/rskswap-sdk'
 
 export function filterTokens(tokens: Token[], search: string): Token[] {
   if (search.length === 0) return tokens

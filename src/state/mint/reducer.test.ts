@@ -1,4 +1,4 @@
-import { ChainId, WETH } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, WETH } from '@thinkanddev/rskswap-sdk'
 import { createStore, Store } from 'redux'
 
 import { Field, setDefaultsFromURLMatchParams } from './actions'

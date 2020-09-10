@@ -1,4 +1,4 @@
-import { Token, TokenAmount } from '@thinkanddev/uniswap-sdk-rsk'
+import { Token, TokenAmount } from '@thinkanddev/rskswap-sdk'
 import React, { useContext } from 'react'
 import { ArrowDown } from 'react-feather'
 import { Text } from 'rebass'

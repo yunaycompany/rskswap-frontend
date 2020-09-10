@@ -1,4 +1,4 @@
-import { Token } from '@thinkanddev/uniswap-sdk-rsk'
+import { Token } from '@thinkanddev/rskswap-sdk'
 import { transparentize } from 'polished'
 import React, { useMemo } from 'react'
 import styled from 'styled-components'

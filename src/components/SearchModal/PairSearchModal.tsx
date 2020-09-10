@@ -1,4 +1,4 @@
-import { Pair } from '@thinkanddev/uniswap-sdk-rsk'
+import { Pair } from '@thinkanddev/rskswap-sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { isMobile } from 'react-device-detect'
 import { useTranslation } from 'react-i18next'

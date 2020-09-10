@@ -1,9 +1,9 @@
-import { ChainId, Token } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, Token } from '@thinkanddev/rskswap-sdk'
 
 export default [
   new Token(ChainId.RSK_TESTNET, '0x19F64674D8A5B4E652319F5e239eFd3bc969A1fE', 18, 'tRIF', 'tRIF Token'),
   new Token(ChainId.RSK_TESTNET, '0xCB46c0ddc60D18eFEB0E586C17Af6ea36452Dae0', 18, 'DOC', 'Dollar on Chain'),
-  new Token(ChainId.RSK_TESTNET, '0x4dA7997A819bb46B6758B9102234c289dD2Ad3bf', 18, 'BITP', 'BitPRO'),
+  new Token(ChainId.RSK_TESTNET, '0x4dA7997A819bb46B6758B9102234c289dD2Ad3bf', 18, 'BPRO', 'BitPRO'),
   new Token(ChainId.RSK_TESTNET, '0xc16625A9CD128E79Bf53774448cCB36e940B639C', 18, 'INV', 'Invecoin'),
   new Token(ChainId.RSK_TESTNET, '0xC3De9F38581f83e281f260d0DdbaAc0e102ff9F8', 18, 'RDOC', 'RIF Dollar on Chain'),
   new Token(ChainId.RSK_TESTNET, '0x23A1aA7b11e68beBE560a36beC04D1f79357f28d', 18, 'RPRO', 'RIF PRO'),

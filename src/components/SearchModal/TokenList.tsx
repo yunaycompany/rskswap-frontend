@@ -1,4 +1,4 @@
-import { JSBI, Token, TokenAmount } from '@thinkanddev/uniswap-sdk-rsk'
+import { JSBI, Token, TokenAmount } from '@thinkanddev/rskswap-sdk'
 import React, { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FixedSizeList } from 'react-window'

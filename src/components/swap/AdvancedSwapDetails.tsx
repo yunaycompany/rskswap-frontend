@@ -1,4 +1,4 @@
-import { Trade, TradeType } from '@thinkanddev/uniswap-sdk-rsk'
+import { Trade, TradeType } from '@thinkanddev/rskswap-sdk'
 import React, { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import { Field } from '../../state/swap/actions'

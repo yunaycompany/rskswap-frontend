@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { RouteComponentProps, Redirect } from 'react-router-dom'
-import { Token, WETH } from '@thinkanddev/uniswap-sdk-rsk'
+import { Token, WETH } from '@thinkanddev/rskswap-sdk'
 import AppBody from '../AppBody'
 
 import Row, { AutoRow } from '../../components/Row'

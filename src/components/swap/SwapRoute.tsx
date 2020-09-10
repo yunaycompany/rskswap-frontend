@@ -1,4 +1,4 @@
-import { Trade } from '@thinkanddev/uniswap-sdk-rsk'
+import { Trade } from '@thinkanddev/rskswap-sdk'
 import React, { Fragment, memo, useContext } from 'react'
 import { ChevronRight } from 'react-feather'
 import { Flex } from 'rebass'

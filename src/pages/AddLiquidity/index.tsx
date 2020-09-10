@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { TokenAmount, WETH } from '@thinkanddev/uniswap-sdk-rsk'
+import { TokenAmount, WETH } from '@thinkanddev/rskswap-sdk'
 import React, { useContext, useState } from 'react'
 import { Plus } from 'react-feather'
 import ReactGA from 'react-ga'

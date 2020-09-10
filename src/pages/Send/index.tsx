@@ -1,4 +1,4 @@
-import { JSBI, TokenAmount, WETH } from '@thinkanddev/uniswap-sdk-rsk'
+import { JSBI, TokenAmount, WETH } from '@thinkanddev/rskswap-sdk'
 import React, { useContext, useEffect, useState } from 'react'
 import { ArrowDown } from 'react-feather'
 import ReactGA from 'react-ga'

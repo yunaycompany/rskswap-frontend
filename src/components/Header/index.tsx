@@ -1,4 +1,4 @@
-import { ChainId, WETH } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, WETH } from '@thinkanddev/rskswap-sdk'
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 import { Link as HistoryLink } from 'react-router-dom'

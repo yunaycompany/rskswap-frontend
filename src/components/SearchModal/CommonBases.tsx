@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from 'rebass'
-import { Token } from '@thinkanddev/uniswap-sdk-rsk'
+import { Token } from '@thinkanddev/rskswap-sdk'
 
 import { SUGGESTED_BASES } from '../../constants'
 import { AutoColumn } from '../Column'

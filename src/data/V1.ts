@@ -1,4 +1,4 @@
-import { JSBI, Pair, Percent, Route, Token, TokenAmount, Trade, TradeType, WETH } from '@thinkanddev/uniswap-sdk-rsk'
+import { JSBI, Pair, Percent, Route, Token, TokenAmount, Trade, TradeType, WETH } from '@thinkanddev/rskswap-sdk'
 import { useMemo } from 'react'
 import { useActiveWeb3React } from '../hooks'
 import { useAllTokens } from '../hooks/Tokens'

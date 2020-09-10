@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Percent, Token, WETH, Pair, TokenAmount } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, JSBI, Percent, Token, WETH, Pair, TokenAmount } from '@thinkanddev/rskswap-sdk'
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 

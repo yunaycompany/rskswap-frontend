@@ -1,4 +1,4 @@
-import { Token, TokenAmount, WETH, Pair } from '@thinkanddev/uniswap-sdk-rsk'
+import { Token, TokenAmount, WETH, Pair } from '@thinkanddev/rskswap-sdk'
 import { useMemo } from 'react'
 import { useActiveWeb3React } from '../../hooks'
 import { useAllTokenBalancesTreatingWETHasETH } from '../../state/wallet/hooks'

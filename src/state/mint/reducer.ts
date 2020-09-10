@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit'
-import { ChainId, WETH } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, WETH } from '@thinkanddev/rskswap-sdk'
 
 import { isAddress } from '../../utils'
 import { Field, setDefaultsFromURLMatchParams, typeInput } from './actions'

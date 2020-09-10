@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Pair, Token, TokenAmount } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, JSBI, Pair, Token, TokenAmount } from '@thinkanddev/rskswap-sdk'
 import flatMap from 'lodash.flatmap'
 import { useCallback, useMemo } from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'

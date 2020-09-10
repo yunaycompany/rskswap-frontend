@@ -1,4 +1,4 @@
-import { Token, TokenAmount, Pair } from '@thinkanddev/uniswap-sdk-rsk'
+import { Token, TokenAmount, Pair } from '@thinkanddev/rskswap-sdk'
 import { useMemo } from 'react'
 import { abi as IUniswapV2PairABI } from '@uniswap/v2-core/build/IUniswapV2Pair.json'
 import { Interface } from '@ethersproject/abi'

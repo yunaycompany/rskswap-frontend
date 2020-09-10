@@ -1,6 +1,6 @@
 import { Version } from './../../hooks/useToggledVersion'
 import { parseUnits } from '@ethersproject/units'
-import { ChainId, JSBI, Token, TokenAmount, Trade, WETH } from '@thinkanddev/uniswap-sdk-rsk'
+import { ChainId, JSBI, Token, TokenAmount, Trade, WETH } from '@thinkanddev/rskswap-sdk'
 import { ParsedQs } from 'qs'
 import { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'

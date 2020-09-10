@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Token, TokenAmount, Trade, ChainId, Pair } from '@thinkanddev/uniswap-sdk-rsk'
+import { Token, TokenAmount, Trade, ChainId, Pair } from '@thinkanddev/rskswap-sdk'
 import flatMap from 'lodash.flatmap'
 
 import { useActiveWeb3React } from './index'

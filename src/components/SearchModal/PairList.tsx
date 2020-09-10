@@ -1,4 +1,4 @@
-import { JSBI, Pair, TokenAmount } from '@thinkanddev/uniswap-sdk-rsk'
+import { JSBI, Pair, TokenAmount } from '@thinkanddev/rskswap-sdk'
 import React from 'react'
 import { FixedSizeList } from 'react-window'
 import { Text } from 'rebass'
