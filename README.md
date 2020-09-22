@@ -34,7 +34,7 @@ yarn start
 
 To have the frontend default to a different network, make a copy of `.env` named `.env.local`, 
 change `REACT_APP_NETWORK_ID` to `"{yourNetworkId}"`, and change `REACT_APP_NETWORK_URL` to e.g. 
-`"https://public-node.testnet.rsk"`. 
+`"https://public-node.testnet.rsk.co"`. 
 
 Note that the front end only works properly on testnets where both 
 [Uniswap V2 RSK](https://rskswap.com/docs/v2/smart-contracts/factory/) and 
