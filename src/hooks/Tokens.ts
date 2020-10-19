@@ -7,7 +7,7 @@ import { useUserAddedTokens } from '../state/user/hooks'
 import { isAddress } from '../utils'
 
 import { useActiveWeb3React } from './index'
-import { useBytes32TokenContract, useTokenContract } from './useContract'
+import { useBytes32TokenContract, useTokenContract, useErc777TokenContract } from './useContract'
 
 export function useAllTokens(): { [address: string]: Token } {
   const { chainId } = useActiveWeb3React()
@@ -58,6 +58,7 @@ export function useToken(tokenAddress?: string): Token | undefined | null {
   const address = isAddress(tokenAddress)
 
   const tokenContract = useTokenContract(address ? address : undefined, false)
+  const tokenContractErc777 = useErc777TokenContract(address ? address : undefined, false)
   const tokenContractBytes32 = useBytes32TokenContract(address ? address : undefined, false)
   const token: Token | undefined = address ? tokens[address] : undefined
 
@@ -71,32 +72,41 @@ export function useToken(tokenAddress?: string): Token | undefined | null {
   const symbol = useSingleCallResult(token ? undefined : tokenContract, 'symbol', undefined, NEVER_RELOAD)
   const symbolBytes32 = useSingleCallResult(token ? undefined : tokenContractBytes32, 'symbol', undefined, NEVER_RELOAD)
   const decimals = useSingleCallResult(token ? undefined : tokenContract, 'decimals', undefined, NEVER_RELOAD)
+  const granularity = useSingleCallResult(
+    token ? undefined : tokenContractErc777,
+    'granularity',
+    undefined,
+    NEVER_RELOAD
+  )
 
   return useMemo(() => {
     if (token) return token
     if (!chainId || !address) return undefined
-    if (decimals.loading || symbol.loading || tokenName.loading) return null
+    if (decimals.loading || symbol.loading || tokenName.loading || granularity.loading) return null
     if (decimals.result) {
       return new Token(
         chainId,
         address,
         decimals.result[0],
         parseStringOrBytes32(symbol.result?.[0], symbolBytes32.result?.[0], 'UNKNOWN'),
-        parseStringOrBytes32(tokenName.result?.[0], tokenNameBytes32.result?.[0], 'Unknown Token')
+        parseStringOrBytes32(tokenName.result?.[0], tokenNameBytes32.result?.[0], 'Unknown Token'),
+        granularity.result ? granularity.result[0] : 1
       )
     }
     return undefined
   }, [
-    address,
+    token,
     chainId,
+    address,
     decimals.loading,
     decimals.result,
     symbol.loading,
     symbol.result,
-    symbolBytes32.result,
-    token,
     tokenName.loading,
     tokenName.result,
+    granularity.loading,
+    granularity.result,
+    symbolBytes32.result,
     tokenNameBytes32.result
   ])
 }

@@ -49,7 +49,6 @@ export function useDerivedBurnInfo(): {
     }),
     [tokenA, tokenB]
   )
-
   // pair + totalsupply
   const pair = usePair(tokens[Field.TOKEN_A], tokens[Field.TOKEN_B])
   const noLiquidity =
@@ -75,7 +74,7 @@ export function useDerivedBurnInfo(): {
       JSBI.greaterThanOrEqual(totalSupply.raw, userLiquidity.raw)
         ? new TokenAmount(
             tokens[Field.TOKEN_A] as Token,
-            pair.getLiquidityValue(tokens[Field.TOKEN_A] as Token, totalSupply, userLiquidity, false).raw
+            pair.getLiquidityValue(tokens[Field.TOKEN_A] as Token, totalSupply, userLiquidity, false).numerator
           )
         : undefined,
     [Field.TOKEN_B]:
@@ -87,7 +86,7 @@ export function useDerivedBurnInfo(): {
       JSBI.greaterThanOrEqual(totalSupply.raw, userLiquidity.raw)
         ? new TokenAmount(
             tokens[Field.TOKEN_B] as Token,
-            pair.getLiquidityValue(tokens[Field.TOKEN_B] as Token, totalSupply, userLiquidity, false).raw
+            pair.getLiquidityValue(tokens[Field.TOKEN_B] as Token, totalSupply, userLiquidity, false).numerator
           )
         : undefined
   }
@@ -96,6 +95,35 @@ export function useDerivedBurnInfo(): {
   // user specified a %
   if (independentField === Field.LIQUIDITY_PERCENT) {
     percentToRemove = new Percent(typedValue, '100')
+    if (
+      tokens[Field.TOKEN_A] !== undefined &&
+      liquidityValues[Field.TOKEN_A] !== undefined &&
+      tokens[Field.TOKEN_A]?.granularity !== 1
+    ) {
+      const liquidityA = liquidityValues[Field.TOKEN_A] as TokenAmount
+      let amountA = JSBI.multiply(percentToRemove.numerator, liquidityA.raw)
+      amountA = JSBI.subtract(
+        amountA,
+        JSBI.remainder(amountA, JSBI.multiply(percentToRemove.denominator, JSBI.BigInt(liquidityA.token.granularity)))
+      )
+      const percentA = new Percent(amountA, JSBI.multiply(percentToRemove.denominator, liquidityA.numerator))
+      percentToRemove = percentToRemove.greaterThan(percentA) ? percentA : percentToRemove
+    }
+
+    if (
+      tokens[Field.TOKEN_B] !== undefined &&
+      liquidityValues[Field.TOKEN_B] !== undefined &&
+      tokens[Field.TOKEN_B]?.granularity !== 1
+    ) {
+      const liquidityB = liquidityValues[Field.TOKEN_B] as TokenAmount
+      let amountB = JSBI.multiply(percentToRemove.numerator, liquidityB.raw)
+      amountB = JSBI.subtract(
+        amountB,
+        JSBI.remainder(amountB, JSBI.multiply(percentToRemove.denominator, JSBI.BigInt(liquidityB.token.granularity)))
+      )
+      const percentB = new Percent(amountB, JSBI.multiply(percentToRemove.denominator, liquidityB.numerator))
+      percentToRemove = percentToRemove.greaterThan(percentB) ? percentB : percentToRemove
+    }
   }
   // user specified a specific amount of liquidity tokens
   else if (independentField === Field.LIQUIDITY) {

@@ -49,6 +49,7 @@ class MiniRpcProvider implements AsyncSendable {
   public readonly request = async (method: string, params?: unknown[] | object): Promise<unknown> => {
     const response = await fetch(this.url, {
       method: 'POST',
+      mode: 'no-cors',
       body: JSON.stringify({
         jsonrpc: '2.0',
         id: 1,

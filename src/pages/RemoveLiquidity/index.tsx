@@ -66,7 +66,7 @@ export default function RemoveLiquidity({ match: { params } }: RouteComponentPro
       ? '0'
       : parsedAmounts[Field.LIQUIDITY_PERCENT].lessThan(new Percent('1', '100'))
       ? '<1'
-      : parsedAmounts[Field.LIQUIDITY_PERCENT].toFixed(0),
+      : parsedAmounts[Field.LIQUIDITY_PERCENT].toFixed(),
     [Field.LIQUIDITY]:
       independentField === Field.LIQUIDITY ? typedValue : parsedAmounts[Field.LIQUIDITY]?.toSignificant(6) ?? '',
     [Field.TOKEN_A]:
@@ -74,9 +74,8 @@ export default function RemoveLiquidity({ match: { params } }: RouteComponentPro
     [Field.TOKEN_B]:
       independentField === Field.TOKEN_B ? typedValue : parsedAmounts[Field.TOKEN_B]?.toSignificant(6) ?? ''
   }
-
+  console.log('formattedAmounts', formattedAmounts)
   const atMaxAmount = parsedAmounts[Field.LIQUIDITY_PERCENT]?.equalTo(new Percent('1'))
-
   // pair contract
   const pairContract: Contract = usePairContract(pair?.liquidityToken?.address)
 
@@ -88,6 +87,7 @@ export default function RemoveLiquidity({ match: { params } }: RouteComponentPro
     const nonce = await pairContract.nonces(account)
     const deadlineForSignature: number = Math.ceil(Date.now() / 1000) + deadline
 
+    console.log('parsedAmounts[Field.LIQUIDITY]', parsedAmounts[Field.LIQUIDITY].raw.toString())
     const EIP712Domain = [
       { name: 'name', type: 'string' },
       { name: 'version', type: 'string' },
@@ -107,6 +107,7 @@ export default function RemoveLiquidity({ match: { params } }: RouteComponentPro
       { name: 'nonce', type: 'uint256' },
       { name: 'deadline', type: 'uint256' }
     ]
+
     const message = {
       owner: account,
       spender: ROUTER_ADDRESS,
