@@ -2342,10 +2342,10 @@
     redux-thunk "^2.3.0"
     reselect "^4.0.0"
 
-"@rsksmart/rsk-contract-metadata@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@rsksmart/rsk-contract-metadata/-/rsk-contract-metadata-1.0.2.tgz#3b90ebe7223b4458c52374151aadf79304217fe1"
-  integrity sha512-rlS9hEJit9g/ytdIoprKR/OYYX9P1pVIy0FPU3m1CqghaR9JvoTJFGUvqEA8AIqemLdrZbYRc22BB8Yw+ifSfA==
+"@rsksmart/rsk-contract-metadata@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@rsksmart/rsk-contract-metadata/-/rsk-contract-metadata-1.0.3.tgz#7b9277b6ffbf34d1c49088bdb6c157049bb05cd1"
+  integrity sha512-eKJlOvs7VYGqCDdMP4KxXB8+132+DyXfQ6K6AhL+BvM022ot8IQFzqPjPCUIp4IxLzwJ1qgN6iTmLMRg9eTY6A==
 
 "@rsksmart/rsk-testnet-contract-metadata@^1.0.1":
   version "1.0.1"

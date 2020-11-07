@@ -11,5 +11,6 @@ export default [
   new Token(ChainId.RSK_MAINNET, '0x73c08467E23F7DCB7dDBbc8d05041B74467A498A', 18, 'rFLIXX', 'Flixxo on RSK'),
   new Token(ChainId.RSK_MAINNET, '0x14AdaE34beF7ca957Ce2dDe5ADD97ea050123827', 18, 'rLINK', 'ChainLink Token'),
   // new Token(ChainId.RSK_MAINNET, '0x5a42221D7AaE8e185BC0054Bb036D9757eC18857', 18, 'rUSDC', 'USD Coin'),
-  // new Token(ChainId.RSK_MAINNET, '0xe506F698b31a66049BD4653ed934E7a07Cbc5549', 18, 'rUSDT', 'Tether USD')
+  // new Token(ChainId.RSK_MAINNET, '0xe506F698b31a66049BD4653ed934E7a07Cbc5549', 18, 'rUSDT', 'Tether USD'),
+  new Token(ChainId.RSK_MAINNET, '0x9C3a5F8d686fADE293c0CE989A62a34408C4E307', 18, 'rRFOX', 'RedFOX Labs')
 ]
