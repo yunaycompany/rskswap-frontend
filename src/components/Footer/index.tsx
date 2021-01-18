@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Send, Sun, Moon } from 'react-feather'
+import { /*Send,*/ Sun, Moon } from 'react-feather'
 import { useDarkModeManager } from '../../state/user/hooks'
 
 import { ButtonSecondary } from '../Button'
@@ -24,7 +24,7 @@ export default function Footer() {
     <FooterFrame>
       <form action="https://forms.gle/sPuSh2NpLk6eh8rq7" target="_blank">
         <ButtonSecondary p="8px 12px">
-          <Send size={16} style={{ marginRight: '8px' }} /> Feedback
+          {/*<Send size={16} style={{ marginRight: '8px' }} /> Feedback*/}
         </ButtonSecondary>
       </form>
       <ButtonSecondary onClick={toggleDarkMode} p="8px 12px" ml="0.5rem" width="min-content">

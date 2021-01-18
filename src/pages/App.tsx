@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { BrowserRouter, HashRouter, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import GoogleAnalyticsReporter from '../components/analytics/GoogleAnalyticsReporter'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Popups from '../components/Popups'
 import Web3ReactManager from '../components/Web3ReactManager'
@@ -90,7 +90,7 @@ export default function App() {
               </Switch>
             </Web3ReactManager>
             <Marginer />
-            <Footer />
+            {/*<Footer />*/}
           </BodyWrapper>
         </AppWrapper>
       </Router>

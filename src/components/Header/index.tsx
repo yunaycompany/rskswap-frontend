@@ -6,17 +6,17 @@ import { Text } from 'rebass'
 
 import styled from 'styled-components'
 
-import Logo from '../../assets/svg/uni.inline.svg'
-import LogoDark from '../../assets/svg/unidark.inline.svg'
+// import Logo from '../../assets/svg/uni.inline.svg'
+// import LogoDark from '../../assets/svg/unidark.inline.svg'
 import Wordmark from '../../assets/svg/rskswap_green.svg'
 import WordmarkDark from '../../assets/svg/rskswap_white.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
 import { useTokenBalanceTreatingWETHasETH } from '../../state/wallet/hooks'
 
-import { ExternalLink } from '../../theme'
+// import { ExternalLink } from '../../theme'
 import { YellowCard } from '../Card'
-import { AutoColumn } from '../Column'
+// import { AutoColumn } from '../Column'
 import Settings from '../Settings'
 import Menu from '../Menu'
 
@@ -93,32 +93,32 @@ const NetworkCard = styled(YellowCard)`
   padding: 8px 12px;
 `
 
-const UniIcon = styled(HistoryLink)<{ to: string }>`
-  transition: transform 0.3s ease;
-  :hover {
-    transform: rotate(-5deg);
-  }
-`
+// const UniIcon = styled(HistoryLink)<{ to: string }>`
+//   transition: transform 0.3s ease;
+//   :hover {
+//     transform: rotate(-5deg);
+//   }
+// `
 
-const MigrateBanner = styled(AutoColumn)`
-  width: 100%;
-  padding: 12px 0;
-  display: flex;
-  justify-content: center;
-  background-color: ${({ theme }) => theme.bg2};
-  color: ${({ theme }) => theme.primaryText1};
-  font-weight: 400;
-  text-align: center;
-  pointer-events: auto;
-  a {
-    color: ${({ theme }) => theme.primaryText1};
-  }
-
-  ${({ theme }) => theme.mediaWidth.upToSmall`
-    padding: 0;
-    display: none;
-  `};
-`
+// const MigrateBanner = styled(AutoColumn)`
+//   width: 100%;
+//   padding: 12px 0;
+//   display: flex;
+//   justify-content: center;
+//   background-color: ${({ theme }) => theme.bg2};
+//   color: ${({ theme }) => theme.primaryText1};
+//   font-weight: 400;
+//   text-align: center;
+//   pointer-events: auto;
+//   a {
+//     color: ${({ theme }) => theme.primaryText1};
+//   }
+//
+//   ${({ theme }) => theme.mediaWidth.upToSmall`
+//     padding: 0;
+//     display: none;
+//   `};
+// `
 
 const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.MAINNET]: 'Ethereum',
@@ -144,22 +144,22 @@ export default function Header() {
 
   return (
     <HeaderFrame>
-      <MigrateBanner>
-        RSK Swap is live! Read the&nbsp;
-        <ExternalLink href="https://rskswap.com/docs/v2/">
-          <b>documentation ↗</b>
-        </ExternalLink>
-        &nbsp;RSK Swap is a fork of the &nbsp;
-        <ExternalLink href="https://uniswap.org/">
-          <b>Uniswap V2 Protocol ↗</b>
-        </ExternalLink>
-      </MigrateBanner>
+      {/*<MigrateBanner>*/}
+      {/*  Coinback Swap is live! Read the&nbsp;*/}
+      {/*  <ExternalLink href="https://rskswap.com/docs/v2/">*/}
+      {/*    <b>documentation ↗</b>*/}
+      {/*  </ExternalLink>*/}
+      {/*  &nbsp;Coinback Swap is a fork of the &nbsp;*/}
+      {/*  <ExternalLink href="https://uniswap.org/">*/}
+      {/*    <b>Uniswap V2 Protocol ↗</b>*/}
+      {/*  </ExternalLink>*/}
+      {/*</MigrateBanner>*/}
       <RowBetween padding="1rem">
         <HeaderElement>
           <Title>
-            <UniIcon id="link" to="/">
-              <img style={{ height: '64px' }} src={isDark ? LogoDark : Logo} alt="logo" />
-            </UniIcon>
+            {/*<UniIcon id="link" to="/">*/}
+            {/*  <img style={{ height: '64px' }} src={isDark ? LogoDark : Logo} alt="logo" />*/}
+            {/*</UniIcon>*/}
             {!isMobile && (
               <TitleText>
                 <HistoryLink id="link" to="/">
